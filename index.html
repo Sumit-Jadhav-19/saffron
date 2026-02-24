@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/vender/fontawesome-free/css/all.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Clinical Research Institute</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="">
+
+        <!-- ================= HEADER ================= -->
+        <header class="shadow-lg fixed top-0 w-full bg-[#0b2979] z-10 text-white">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <h1 class="text-3xl font-bold">Saffron IICRT</h1>
+                <nav class="space-x-6 hidden md:block">
+                    <a href="#" class="hover:text-blue-600">Home</a>
+                    <a href="#" class="hover:text-blue-600">Courses</a>
+                    <a href="#" class="hover:text-blue-600">About</a>
+                    <a href="#" class="hover:text-blue-600">Contact</a>
+
+                    <button type="button" onclick="openModal()"
+                        class="px-8 py-2 bg-white text-blue-900 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
+                        <i class="fas fa-phone text-md"></i>
+                        Enquire Now</button>
+                </nav>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 md:hidden">
+                    Menu
+                </button>
+            </div>
+        </header>
+
+        <!-- ================= HERO SECTION ================= -->
+        <section class="min-h-screen flex items-center hero-section">
+
+            <div class="container mx-auto px-6 lg:px-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+                    <div class="relative h-96 md:h-[500px]">
+
+                    </div>
+                    <!-- Left Content -->
+                    <div class="max-w-4xl">
+
+                        <h1 class="text-2xl md:text-6xl font-bold text-white leading-tight md:leading-[1.2] mb-6">
+                            Empowering the Future of
+                            <br class="hidden md:block" />
+                            <span class="text-yellow-400"> Clinical Research </span>
+                        </h1>
+
+                        <p class="text-lg md:text-xl text-blue-100 leading-relaxed mb-8 max-w-2xl">
+                            Advancing healthcare through innovation, ethical research practices,
+                            and cutting-edge clinical trials that transform patient outcomes.
+                        </p>
+
+                        <button
+                            class="px-8 py-3 bg-white text-blue-900 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
+                            Get Started
+                            <i class="fas fa-arrow-right text-md"></i>
+                        </button>
+
+                    </div>
+
+                    <!-- Right Image -->
+
+
+                </div>
+            </div>
+
+        </section>
+        <!-- ================= ABOUT SECTION ================= -->
+        <section class="py-20 bg-blue-50">
+            <div class="container mx-auto px-6 lg:px-20">
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+
+
+
+                    <!-- Content -->
+                    <div>
+
+                        <!-- Section Header -->
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-5xl font-bold text-blue-900 mb-4">
+                                About us
+                            </h2>
+                            <div class="w-24 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full"></div>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            We are a leading Clinical Research Center committed to advancing
+                            healthcare through innovative clinical trials, ethical research
+                            practices, and state-of-the-art laboratory facilities.
+                        </p>
+
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Our experienced team of medical professionals and researchers
+                            work collaboratively to deliver accurate, reliable, and impactful
+                            research outcomes that improve patient care worldwide.
+                        </p>
+
+                        <button
+                            class="px-6 py-3 bg-gradient-to-r from-blue-900 to-blue-500 text-white rounded-full shadow-lg hover:scale-105 transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                    <!-- Image -->
+                    <div>
+                        <img src="assets/images/clinical-reaserch.jpg" alt="Clinical Research Lab"
+                            class="rounded-2xl shadow-xl w-full" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= VISION SECTION ================= -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 lg:px-20">
+
+                <!-- Section Header -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold text-blue-900 mb-4">
+                        Our Vision
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Content Card -->
+                <div class="max-w-4xl mx-auto bg-blue-50 p-8 md:p-12 rounded-3xl shadow-xl">
+
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        Our vision is to establish ourselves as a globally respected institution
+                        that prepares individuals for successful careers in emerging industries.
+                    </p>
+
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        We are dedicated to developing and empowering a diverse community of
+                        professionals by focusing not only on theoretical education but also
+                        on experiential learning, real-world application, and skill-based training.
+                    </p>
+
+                    <!-- Highlight Points -->
+                    <div class="grid md:grid-cols-3 gap-6 mt-8 text-center">
+                        <div class="p-4 bg-white rounded-xl shadow-md">
+                            <h3 class="font-semibold text-blue-900">Global Excellence</h3>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl shadow-md">
+                            <h3 class="font-semibold text-blue-900">Experiential Learning</h3>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl shadow-md">
+                            <h3 class="font-semibold text-blue-900">Skill-Based Training</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- ================= MISSION SECTION ================= -->
+        <section class="py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+            <div class="container mx-auto px-6 lg:px-20">
+
+                <!-- Section Header -->
+                <div class="text-center mb-14">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                        Our Mission
+                    </h2>
+                    <div class="w-24 h-1 bg-white mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="max-w-5xl mx-auto text-center">
+
+                    <p class="text-lg md:text-xl leading-relaxed text-blue-100 mb-8">
+                        At <span class="font-semibold text-white">Saffron IICRT</span>, our mission is to harness
+                        the power of technology to equip students with the knowledge, practical skills, and
+                        digital tools they need to excel in the modern world of clinical research.
+                    </p>
+
+                    <p class="text-lg leading-relaxed text-blue-100 mb-8">
+                        We provide future-focused education that blends core scientific understanding
+                        with advanced technological applications — including data-driven research,
+                        Electronic Data Capture (EDC) systems, AI-driven analytics, and digital trial platforms.
+                    </p>
+
+                </div>
+
+                <!-- Feature Highlights -->
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+
+                    <div class="bg-white text-blue-900 p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-xl font-semibold mb-3">Technology-Driven Learning</h3>
+                        <p class="text-gray-600">
+                            Simulation-based learning, virtual labs, and industry-standard
+                            software training for real-world readiness.
+                        </p>
+                    </div>
+
+                    <div class="bg-white text-blue-900 p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-xl font-semibold mb-3">Innovation in Clinical Trials</h3>
+                        <p class="text-gray-600">
+                            Hands-on exposure to EDC systems, AI analytics, and digital
+                            platforms transforming drug development.
+                        </p>
+                    </div>
+
+                    <div class="bg-white text-blue-900 p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-xl font-semibold mb-3">Future-Ready Professionals</h3>
+                        <p class="text-gray-600">
+                            Developing adaptable, ethical, and forward-thinking
+                            professionals for global healthcare advancement.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Closing Statement -->
+                <div class="max-w-4xl mx-auto text-center mt-14">
+                    <p class="text-lg text-blue-100 leading-relaxed">
+                        Our goal is to contribute to safer, faster, and more efficient research
+                        that ultimately improves patient outcomes worldwide.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= COURCES SECTION ================= -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6 lg:px-16">
+
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <!-- Section Header -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-5xl font-bold text-blue-900 mb-4">
+                            Our Cources
+                        </h2>
+                        <div class="w-24 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full"></div>
+                    </div>
+                    <p class="text-gray-500 mt-2">
+                        Industry-focused clinical research programs
+                    </p>
+                </div>
+
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                        <!-- Image -->
+                        <div class="relative">
+                            <img src="./assets/images/MedicalWriting.png" class="w-full h-56 object-cover">
+
+                            <!-- Icon -->
+                            <div class="absolute top-4 right-4 bg-teal-600 text-white p-3 rounded-full shadow-md">
+                                <i class="fas fa-heartbeat text-2xl"></i>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">
+                                Medical Writing
+                            </h3>
+
+                            <p class="text-gray-600 mt-4 text-sm leading-relaxed line-clamp-3">
+                                Our Medical Writing program equips learners with the skills to create clear, accurate,
+                                and regulatory-compliant medical documents. Training includes clinical study reports,
+                                research articles, regulatory documents, and scientific publications. We focus on
+                                industry standards, documentation guidelines, and real-world writing practices. This
+                                program prepares professionals for rewarding careers in pharmaceutical, biotech, and
+                                healthcare organizations.
+                            </p>
+
+                            <a href="#" class="inline-flex items-center mt-5 text-teal-600 font-medium hover:underline">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                        <div class="relative">
+                            <img src="./assets/images/RegulatoryAffairs.png" class="w-full h-56 object-cover">
+
+                            <div class="absolute top-4 right-4 bg-teal-600 text-white p-3 rounded-full shadow-md">
+                                <i class="fas fa-brain text-2xl"></i>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">
+                                Regulatory Affairs
+                            </h3>
+
+                            <p class="text-gray-600 mt-4 text-sm leading-relaxed line-clamp-3">
+                                Our Regulatory Affairs program provides in-depth knowledge of global regulatory
+                                guidelines and approval processes. Learn how to prepare and manage regulatory
+                                submissions for pharmaceuticals and medical devices. Gain practical insights into
+                                compliance, documentation, and quality standards. This training prepares you for key
+                                roles in regulatory, quality assurance, and compliance departments.
+                            </p>
+
+                            <a href="#" class="inline-flex items-center mt-5 text-teal-600 font-medium hover:underline">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                        <div class="relative">
+                            <img src="./assets/images/Pharmacovigilance.png" class="w-full h-56 object-cover">
+
+                            <div class="absolute top-4 right-4 bg-teal-600 text-white p-3 rounded-full shadow-md">
+                                <i class="fas fa-bone text-2xl"></i>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">
+                                Pharmacovigilance
+                            </h3>
+
+                            <p class="text-gray-600 mt-4 text-sm leading-relaxed line-clamp-3">
+                                Our Pharmacovigilance program focuses on drug safety monitoring and adverse event
+                                reporting. Learn case processing, signal detection, and global safety regulations. Gain
+                                practical training in safety databases and regulatory reporting standards. This course
+                                prepares you for careers in drug safety and risk management within pharmaceutical and
+                                healthcare industries.
+                            </p>
+
+                            <a href="#" class="inline-flex items-center mt-5 text-teal-600 font-medium hover:underline">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                        <!-- Image -->
+                        <div class="relative">
+                            <img src="./assets//images/ClinicalResearch.png" class="w-full h-56 object-cover">
+
+                            <!-- Icon -->
+                            <div class="absolute top-4 right-4 bg-teal-600 text-white p-3 rounded-full shadow-md">
+                                <i class="fas fa-baby text-2xl"></i>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">
+                                Clinical Research
+                            </h3>
+
+                            <p class="text-gray-600 mt-4 text-sm leading-relaxed line-clamp-3">
+                                Our Clinical Research program provides comprehensive training on clinical trial
+                                processes and study management. Learn protocol development, site coordination,
+                                monitoring, and regulatory compliance. Gain hands-on experience with real-world case
+                                studies and industry tools. This program prepares you for successful careers in clinical
+                                operations, CROs, and pharmaceutical companies.
+                            </p>
+
+                            <a href="#" class="inline-flex items-center mt-5 text-teal-600 font-medium hover:underline">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                        <div class="relative">
+                            <img src="./assets//images/ClinicalDataManagement.png" class="w-full h-56 object-cover">
+
+                            <div class="absolute top-4 right-4 bg-teal-600 text-white p-3 rounded-full shadow-md">
+                                <i class="fas fa-ribbon text-2xl"></i>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">
+                                Clinical Data Management
+                            </h3>
+
+                            <p class="text-gray-600 mt-4 text-sm leading-relaxed line-clamp-3">
+                                Our Clinical Data Management program trains you in collecting, validating, and managing
+                                clinical trial data with accuracy and compliance. Learn database design, data cleaning,
+                                query management, and regulatory standards. Gain hands-on exposure to industry tools and
+                                real-time project workflows. This course prepares you for rewarding careers in data
+                                management within CROs and pharmaceutical organizations.
+                            </p>
+
+                            <a href="#" class="inline-flex items-center mt-5 text-teal-600 font-medium hover:underline">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                        <div class="relative">
+                            <img src="assets/images/SAS.png" class="w-full h-56 object-cover">
+
+                            <div class="absolute top-4 right-4 bg-teal-600 text-white p-3 rounded-full shadow-md">
+                                <i class="fas fa-flask text-2xl"></i>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800">
+                                SAS
+                            </h3>
+
+                            <p class="text-gray-600 mt-4 text-sm leading-relaxed line-clamp-3">
+                                Our SAS program provides practical training in statistical analysis and clinical trial
+                                data interpretation. Learn data manipulation, reporting, and programming techniques used
+                                in the pharmaceutical industry. Gain hands-on experience with real clinical datasets and
+                                regulatory-compliant outputs. This course prepares you for roles in biostatistics, data
+                                analysis, and clinical research organizations.
+                            </p>
+
+                            <a href="#" class="inline-flex items-center mt-5 text-teal-600 font-medium hover:underline">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TESTIMONIAL SECTION ================= -->
+        <section class="py-20 bg-blue-50">
+            <div class="container mx-auto px-6 lg:px-20">
+
+                <!-- Heading -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold text-blue-900 mb-4">
+                        What Our Students Say
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Slider -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+
+                                <!-- Profile Image -->
+                                <div class="flex justify-center mb-4">
+                                    <img src="assets/images/persons/person-m-12.webp" alt="Rahul Sharma"
+                                        class="w-20 h-20 rounded-full object-cover border-4 border-blue-100 shadow-md" />
+                                </div>
+
+                                <!-- Testimonial Text -->
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    The practical exposure and technology-driven training helped me
+                                    secure a job in a leading clinical research company.
+                                </p>
+
+                                <!-- Name & Role -->
+                                <h4 class="font-semibold text-blue-900 text-lg">
+                                    Rahul Sharma
+                                </h4>
+                                <span class="text-sm text-gray-500">
+                                    Clinical Research Associate
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+
+                                <!-- Profile Image -->
+                                <div class="flex justify-center mb-4">
+                                    <img src="assets/images/persons/person-m-13.webp" alt="Rahul Sharma"
+                                        class="w-20 h-20 rounded-full object-cover border-4 border-blue-100 shadow-md" />
+                                </div>
+
+                                <!-- Testimonial Text -->
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    The practical exposure and technology-driven training helped me
+                                    secure a job in a leading clinical research company.
+                                </p>
+
+                                <!-- Name & Role -->
+                                <h4 class="font-semibold text-blue-900 text-lg">
+                                    Rahul Sharma
+                                </h4>
+                                <span class="text-sm text-gray-500">
+                                    Clinical Research Associate
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+
+                                <!-- Profile Image -->
+                                <div class="flex justify-center mb-4">
+                                    <img src="assets/images/persons/person-f-12.webp" alt="Rahul Sharma"
+                                        class="w-20 h-20 rounded-full object-cover border-4 border-blue-100 shadow-md" />
+                                </div>
+
+                                <!-- Testimonial Text -->
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    The practical exposure and technology-driven training helped me
+                                    secure a job in a leading clinical research company.
+                                </p>
+
+                                <!-- Name & Role -->
+                                <h4 class="font-semibold text-blue-900 text-lg">
+                                    Rahul Sharma
+                                </h4>
+                                <span class="text-sm text-gray-500">
+                                    Clinical Research Associate
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+
+                                <!-- Profile Image -->
+                                <div class="flex justify-center mb-4">
+                                    <img src="assets/images/persons/person-m-9.webp" alt="Rahul Sharma"
+                                        class="w-20 h-20 rounded-full object-cover border-4 border-blue-100 shadow-md" />
+                                </div>
+
+                                <!-- Testimonial Text -->
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    The practical exposure and technology-driven training helped me
+                                    secure a job in a leading clinical research company.
+                                </p>
+
+                                <!-- Name & Role -->
+                                <h4 class="font-semibold text-blue-900 text-lg">
+                                    Rahul Sharma
+                                </h4>
+                                <span class="text-sm text-gray-500">
+                                    Clinical Research Associate
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+
+                                <!-- Profile Image -->
+                                <div class="flex justify-center mb-4">
+                                    <img src="assets/images/persons/person-f-13.webp" alt="Rahul Sharma"
+                                        class="w-20 h-20 rounded-full object-cover border-4 border-blue-100 shadow-md" />
+                                </div>
+
+                                <!-- Testimonial Text -->
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    The practical exposure and technology-driven training helped me
+                                    secure a job in a leading clinical research company.
+                                </p>
+
+                                <!-- Name & Role -->
+                                <h4 class="font-semibold text-blue-900 text-lg">
+                                    Rahul Sharma
+                                </h4>
+                                <span class="text-sm text-gray-500">
+                                    Clinical Research Associate
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+
+                                <!-- Profile Image -->
+                                <div class="flex justify-center mb-4">
+                                    <img src="assets/images/persons/person-f-5.webp" alt="Rahul Sharma"
+                                        class="w-20 h-20 rounded-full object-cover border-4 border-blue-100 shadow-md" />
+                                </div>
+
+                                <!-- Testimonial Text -->
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    The practical exposure and technology-driven training helped me
+                                    secure a job in a leading clinical research company.
+                                </p>
+
+                                <!-- Name & Role -->
+                                <h4 class="font-semibold text-blue-900 text-lg">
+                                    Rahul Sharma
+                                </h4>
+                                <span class="text-sm text-gray-500">
+                                    Clinical Research Associate
+                                </span>
+                                <div class="text-yellow-400 mb-3">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= GET IN TOUCH ================= -->
+        <div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+
+            <!-- Modal Box -->
+            <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full mx-4 overflow-hidden relative">
+
+                <!-- Close Button -->
+                <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl">
+                    <i class="fas fa-xmark text-md"></i>
+                </button>
+
+                <div class="grid md:grid-cols-2">
+
+                    <!-- Left Image -->
+                    <div class="hidden md:block">
+                        <img src="assets/images/Get in touch-pana.svg" alt="Clinical Research" class="h-full w-full object-contain">
+                    </div>
+
+                    <!-- Right Form -->
+                    <div class="p-8 bg-blue-900">
+                        <h2 class="text-2xl font-bold text-white mb-6">
+                            Get In Touch
+                        </h2>
+
+                        <form class="space-y-4">
+
+                            <input type="text" placeholder="Full Name"
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+
+                            <input type="tel" placeholder="Mobile Number"
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+
+                            <input type="email" placeholder="Email Address"
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+
+                            <textarea rows="4" placeholder="Your Message"
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+
+                            <button type="submit"
+                                class="w-full px-8 py-2 bg-white text-blue-900 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
+                                Submit
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- ================= FOOTER ================= -->
+        <footer class="bg-gray-900 text-gray-300">
+            <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-8">
+
+                <div>
+                    <h4 class="text-white text-xl font-bold">Saffron IICRT</h4>
+                    <p class="mt-4 text-gray-400">
+                        Practical-based clinical research training institute preparing professionals for healthcare
+                        industries.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-semibold">Quick Links</h5>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="hover:text-white">Home</a></li>
+                        <li><a href="#" class="hover:text-white">Courses</a></li>
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-semibold">Contact</h5>
+                    <p class="mt-4 text-gray-400">
+                        Email: info@saffroniicrt.com <br>
+                        Phone: +91 98765 43210 <br>
+                        Location: India
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-semibold">Follow Us</h5>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="hover:text-white">Facebook</a>
+                        <a href="#" class="hover:text-white">LinkedIn</a>
+                        <a href="#" class="hover:text-white">Instagram</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center py-6 border-t border-gray-700 text-gray-500">
+                © 2026 Saffron IICRT. All rights reserved.
+            </div>
+        </footer>
+
+    </body>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+
+        function openModal() {
+            document.getElementById("popupModal").classList.remove("hidden");
+            document.getElementById("popupModal").classList.add("flex");
+        }
+
+        function closeModal() {
+            document.getElementById("popupModal").classList.remove("flex");
+            document.getElementById("popupModal").classList.add("hidden");
+        }
+    </script>
+
+    </html>
+
+</body>
+
+</html>
