@@ -33,23 +33,45 @@
     <body class="">
 
         <!-- ================= HEADER ================= -->
-        <header class="shadow-lg fixed top-0 w-full bg-[#0b2979] z-10 text-white">
+        <header class="shadow-lg fixed top-0 w-full bg-[#0b2979] z-50 text-white">
             <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+                <!-- Logo -->
                 <h1 class="text-3xl font-bold">Saffron IICRT</h1>
-                <nav class="space-x-6 hidden md:block">
-                    <a href="#" class="hover:text-blue-600">Home</a>
-                    <a href="#" class="hover:text-blue-600">Courses</a>
-                    <a href="#" class="hover:text-blue-600">About</a>
-                    <a href="#" class="hover:text-blue-600">Contact</a>
+
+                <!-- Desktop Menu -->
+                <nav class="space-x-6 hidden md:flex items-center">
+                    <a href="#" class="font-semibold hover:text-yellow-400">Home</a>
+                    <a href="#" class="font-semibold hover:text-yellow-400">Courses</a>
+                    <a href="#" class="font-semibold hover:text-yellow-400">About</a>
+                    <a href="#" class="font-semibold hover:text-yellow-400">Contact</a>
 
                     <button type="button" onclick="openModal()"
-                        class="px-8 py-2 bg-white text-blue-900 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
-                        <i class="fas fa-phone text-md"></i>
-                        Enquire Now</button>
+                        class="px-6 py-2 bg-white text-blue-900 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
+                        Enquire Now
+                    </button>
                 </nav>
-                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 md:hidden">
-                    Menu
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMenu()" class="md:hidden text-3xl">
+                    ☰
                 </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu"
+                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#0b2979] md:hidden">
+
+                <div class="flex flex-col px-6 py-6 space-y-4">
+                    <a href="#" onclick="toggleMenu()" class="font-semibold hover:text-yellow-400">Home</a>
+                    <a href="#" onclick="toggleMenu()" class="font-semibold hover:text-yellow-400">Courses</a>
+                    <a href="#" onclick="toggleMenu()" class="font-semibold hover:text-yellow-400">About</a>
+                    <a href="#" onclick="toggleMenu()" class="font-semibold hover:text-yellow-400">Contact</a>
+
+                    <button onclick="openModal()" class="mt-4 px-6 py-2 bg-white text-blue-900 font-semibold rounded-full shadow-lg">
+                        Enquire Now
+                    </button>
+                </div>
             </div>
         </header>
 
@@ -76,8 +98,8 @@
                         </p>
 
                         <button
-                            class="px-8 py-3 bg-white text-blue-900 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
-                            Get Started
+                            class="px-8 py-3 bg-white text-blue-900 font-bold rounded-full shadow-lg hover:scale-105 transition duration-300">
+                            APPLY NOW
                             <i class="fas fa-arrow-right text-md"></i>
                         </button>
 
@@ -147,7 +169,7 @@
                 </div>
 
                 <!-- Content Card -->
-                <div class="max-w-4xl mx-auto bg-blue-50 p-8 md:p-12 rounded-3xl shadow-xl">
+                <div class="max-w-4xl mx-auto  p-8 md:p-12 rounded-3xl ">
 
                     <p class="text-gray-700 text-lg leading-relaxed mb-6">
                         Our vision is to establish ourselves as a globally respected institution
@@ -247,7 +269,7 @@
         </section>
 
         <!-- ================= COURCES SECTION ================= -->
-        <section class="py-16 bg-white">
+        <section class="py-16">
             <div class="container mx-auto px-6 lg:px-16">
 
                 <!-- Section Title -->
@@ -462,7 +484,149 @@
                 </div>
             </div>
         </section>
+        <!-- ================= CONTACT SECTION ================= -->
+        <section class="bg-blue-50 py-16">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
+                <!-- Heading -->
+                <div class="text-center mb-12">
+                    <!-- Heading -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-5xl font-bold text-blue-900 mb-4">
+                            Contact Us
+                        </h2>
+                        <div class="w-24 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full"></div>
+                    </div>
+                    <p class="mt-2 text-gray-600">
+                        We'd love to hear from you. Please fill out the form below.
+                    </p>
+                </div>
+
+                <!-- Content -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                    <!-- LEFT SIDE - FORM -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <form class="space-y-6">
+
+                            <!-- Full Name -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Full Name
+                                </label>
+                                <input type="text" placeholder="Enter your full name"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                    required />
+                            </div>
+
+                            <!-- Email -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Email Address
+                                </label>
+                                <input type="email" placeholder="Enter your email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                    required />
+                            </div>
+
+                            <!-- Phone -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Phone Number
+                                </label>
+                                <input type="tel" placeholder="Enter your phone number"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                    required />
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Message
+                                </label>
+                                <textarea rows="4" placeholder="Write your message..."
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                    required></textarea>
+                            </div>
+
+                            <!-- Button -->
+                            <div>
+                                <button type="submit"
+                                    class="w-full px-8 py-2 bg-blue-800 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
+                                    Send Message
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- RIGHT SIDE - GOOGLE MAP -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.567546713029!2d72.87765537466113!3d19.07609038212927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c63f8bffffffff%3A0x0!2sMumbai!5e0!3m2!1sen!2sin!4v1690000000000"
+                            width="100%" height="100%" class="min-h-[450px] border-0" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ================= CLIENT SECTION ================= -->
+        <section class="py-20 overflow-hidden">
+            <!-- Heading -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold text-blue-900 mb-4">
+                    Our Hiring Partners
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-900 to-blue-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="relative w-full overflow-hidden">
+                <div class="flex w-max animate-scroll gap-12">
+
+                    <!-- ORIGINAL LOGOS -->
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/cipla.png" class="h-16 object-contain" />
+                    </div>
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/glenmark.png" class="h-16 object-contain" />
+                    </div>
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/pfizer.png" class="h-16 object-contain" />
+                    </div>
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/sequent.png" class="h-16 object-contain" />
+                    </div>
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/sunpharma.png" class="h-16 object-contain" />
+                    </div>
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/wipro.png" class="h-16 object-contain" />
+                    </div>
+
+                    <!-- DUPLICATE FOR SMOOTH LOOP -->
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/cipla.png" class="h-16 object-contain" />
+                    </div>
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/glenmark.png" class="h-16 object-contain" />
+                    </div>
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/pfizer.png" class="h-16 object-contain" />
+                    </div>
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/sequent.png" class="h-16 object-contain" />
+                    </div>
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/sunpharma.png" class="h-16 object-contain" />
+                    </div>
+                    <div class="flex items-center justify-center w-40">
+                        <img src="assets/images/client/wipro.png" class="h-16 object-contain" />
+                    </div>
+
+                </div>
+            </div>
+        </section>
         <!-- ================= TESTIMONIAL SECTION ================= -->
         <section class="py-20 bg-blue-50">
             <div class="container mx-auto px-6 lg:px-20">
@@ -476,7 +640,7 @@
                 </div>
 
                 <!-- Slider -->
-                <div class="swiper mySwiper">
+                <div class="swiper mySwiper p-4">
                     <div class="swiper-wrapper">
 
                         <!-- Testimonial 1 -->
@@ -605,7 +769,7 @@
 
                                 <!-- Name & Role -->
                                 <h4 class="font-semibold text-blue-900 text-lg">
-                                    Rahul Sharma
+                                    - Rahul Sharma
                                 </h4>
                                 <span class="text-sm text-gray-500">
                                     Clinical Research Associate
@@ -632,12 +796,12 @@
 
                                 <!-- Name & Role -->
                                 <h4 class="font-semibold text-blue-900 text-lg">
-                                    Rahul Sharma
+                                    - Rahul Sharma
                                 </h4>
                                 <span class="text-sm text-gray-500">
                                     Clinical Research Associate
                                 </span>
-                                <div class="text-yellow-400 mb-3">★★★★★</div>
+                                <!-- <div class="text-yellow-400 mb-3">★★★★★</div>-->
                             </div>
                         </div>
                     </div>
@@ -661,7 +825,8 @@
 
                     <!-- Left Image -->
                     <div class="hidden md:block">
-                        <img src="assets/images/Get in touch-pana.svg" alt="Clinical Research" class="h-full w-full object-contain">
+                        <img src="assets/images/Get in touch-pana.svg" alt="Clinical Research"
+                            class="h-full w-full object-contain">
                     </div>
 
                     <!-- Right Form -->
@@ -673,16 +838,20 @@
                         <form class="space-y-4">
 
                             <input type="text" placeholder="Full Name"
-                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required />
 
                             <input type="tel" placeholder="Mobile Number"
-                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required />
 
                             <input type="email" placeholder="Email Address"
-                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required />
 
                             <textarea rows="4" placeholder="Your Message"
-                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required></textarea>
 
                             <button type="submit"
                                 class="w-full px-8 py-2 bg-white text-blue-900 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
@@ -695,6 +864,12 @@
                 </div>
             </div>
         </div>
+
+        <a href="https://wa.me/917709364700?text=Hello%21%20I%20am%20interested%20in%20your%20courses.%20Please%20guide%20me."
+            class="fixed bottom-10 right-2 bg-white rounded-[50%] py-2 px-1 hover:scale-105 transition duration-300"
+            target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp text-4xl" style="color: rgb(2, 117, 66);"></i>
+        </a>
         <!-- ================= FOOTER ================= -->
         <footer class="bg-gray-900 text-gray-300">
             <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-8">
@@ -720,9 +895,14 @@
                 <div>
                     <h5 class="text-white font-semibold">Contact</h5>
                     <p class="mt-4 text-gray-400">
-                        Email: info@saffroniicrt.com <br>
-                        Phone: +91 98765 43210 <br>
-                        Location: India
+                        Email : info@saffronindia.org.in <br>
+                        placement@saffronindia.org.in <br>
+                        Phone: 18001031071 (Toll Free) <br>
+                        +91 7709364700 <br><br>
+                        Location: Saffron India Institute of Clinical Research & Technology
+                        C-6, Narhe Institutional Area,
+                        Narhe, Pune
+                        Maharashtra – 411041, India
                     </p>
                 </div>
 
@@ -766,6 +946,7 @@
         });
 
         function openModal() {
+            toggleMenu();
             document.getElementById("popupModal").classList.remove("hidden");
             document.getElementById("popupModal").classList.add("flex");
         }
@@ -773,6 +954,17 @@
         function closeModal() {
             document.getElementById("popupModal").classList.remove("flex");
             document.getElementById("popupModal").classList.add("hidden");
+        }
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+
+            if (menu.classList.contains("max-h-0")) {
+                menu.classList.remove("max-h-0");
+                menu.classList.add("max-h-screen");
+            } else {
+                menu.classList.remove("max-h-screen");
+                menu.classList.add("max-h-0");
+            }
         }
     </script>
 
