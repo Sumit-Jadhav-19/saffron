@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Main CSS File -->
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="assets/vender/fontawesome-free/css/all.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0b2979',
+                        teal: '#0E7C7B',
+                        gold: '#D4A843',
+                        cream: '#F9F4EC',
+                        'light-teal': '#E8F5F5',
+                    },
+                    fontFamily: {
+                        display: ['"Playfair Display"', 'serif'],
+                        sans: ['"DM Sans"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="topbar bg-navy border-b border-white/10 px-4 py-1.5 hidden md:block">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+
+            <!-- Left: contact -->
+            <div class="flex items-center gap-5">
+                <a href="tel:18001031071"
+                    class="flex items-center gap-1.5 text-white/55 hover:text-white text-xs transition-colors no-underline">
+                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    1800 103 1071 (Toll Free)
+                </a>
+                <a href="mailto:info@saffronindia.org.in"
+                    class="flex items-center gap-1.5 text-white/55 hover:text-white text-xs transition-colors no-underline">
+                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    info@saffronindia.org.in
+                </a>
+            </div>
+
+            <!-- Right: certifications + social -->
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5 text-white/55 text-xs">
+                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    ISO 9001:2015
+                </span>
+                <span class="w-px h-3 bg-white/20"></span>
+                <span class="flex items-center gap-1.5 text-white/55 text-xs">
+                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                    </svg>
+                    MSME Certified
+                </span>
+                <span class="w-px h-3 bg-white/20"></span>
+                <div class="flex items-center gap-3">
+                    <a href="#" class="text-white/45 hover:text-gold transition-colors" aria-label="Facebook">
+                        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white/45 hover:text-gold transition-colors" aria-label="LinkedIn">
+                        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white/45 hover:text-gold transition-colors" aria-label="Instagram">
+                        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+     MAIN NAVBAR
+══════════════════════════════════════ -->
+    <nav class="sticky top-0 z-50 bg-navy shadow-[0_2px_24px_rgba(11,31,58,0.35)]" id="navbar">
+        <!-- Gold top accent line -->
+        <div class="h-[3px] bg-gradient-to-r from-gray via-gray to-gray"></div>
+
+        <div class="max-w-6xl mx-auto px-5 py-0">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- ── Logo ── -->
+                <a href="/" class="flex items-center gap-3 no-underline group">
+                    <!-- Icon mark -->
+                    <div
+                        class="w-9 h-9 rounded-lg bg-gradient-to-br from-teal to-teal/70 flex items-center justify-center shadow-md flex-shrink-0">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                    </div>
+                    <!-- Text -->
+                    <div>
+                        <span
+                            class="font-display font-black text-white text-3xl leading-none tracking-tight group-hover:text-gold transition-colors">
+                            Saffron
+                        </span>
+                        <span class="font-display font-black text-gold text-3xl leading-none"> IICRT</span>
+                        <p class="text-white/35 text-[9px] font-medium tracking-widest uppercase leading-none mt-0.5">
+                            Clinical Research & Technology</p>
+                    </div>
+                </a>
+
+                <!-- ── Desktop Nav Links ── -->
+                <div class="hidden lg:flex items-center gap-1">
+
+                    <!-- Home -->
+                    <a href="/"
+                        class="nav-link active px-3 py-5 text-m font-medium text-white/85 hover:text-white transition-colors no-underline">
+                        Home
+                    </a>
+
+                    <!-- About dropdown -->
+                    <div class="dropdown relative">
+                        <button
+                            class="nav-link flex items-center gap-1 px-3 py-5 text-m font-medium text-white/85 hover:text-white transition-colors bg-transparent border-none cursor-pointer">
+                            About
+                            <svg class="w-3.5 h-3.5 text-white/50" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="dropdown-menu absolute top-full left-0 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 z-50">
+                            <div class="px-3 py-1.5 mb-1">
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">About Saffron
+                                </p>
+                            </div>
+                            <a href="/aboutus.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-light-teal hover:text-teal transition-colors no-underline">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span> About Us
+                            </a>
+                            <a href="/mission"
+                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-light-teal hover:text-teal transition-colors no-underline">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span> Our Mission
+                            </a>
+                            <a href="/vision"
+                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-light-teal hover:text-teal transition-colors no-underline">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span> Our Vision
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Courses dropdown -->
+                    <div class="dropdown relative">
+                        <button
+                            class="nav-link flex items-center gap-1 px-3 py-5 text-m font-medium text-white/85 hover:text-white transition-colors bg-transparent border-none cursor-pointer">
+                            Courses
+                            <svg class="w-3.5 h-3.5 text-white/50" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="dropdown-menu absolute top-full left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 z-50">
+                            <div class="px-3 py-1.5 mb-1">
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">PG Diploma
+                                    Programmes</p>
+                            </div>
+                            <a href="/cources/medical-writing.html"
+                                class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span>
+                                <div>
+                                    <p
+                                        class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">
+                                        Medical Writing</p>
+                                    <p class="text-xs text-gray-400 leading-tight mt-0.5">in Clinical Research (Drug)
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="/cources/regulatory-affairs.html"
+                                class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span>
+                                <div>
+                                    <p
+                                        class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">
+                                        Regulatory Affairs</p>
+                                    <p class="text-xs text-gray-400 leading-tight mt-0.5">Global regulatory frameworks
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="/cources/pharmacovigilance.html"
+                                class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span>
+                                <div>
+                                    <p
+                                        class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">
+                                        Pharmacovigilance</p>
+                                    <p class="text-xs text-gray-400 leading-tight mt-0.5">Drug safety & ADR reporting
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="/cources/clinical-research.html"
+                                class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span>
+                                <div>
+                                    <p
+                                        class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">
+                                        Clinical Research</p>
+                                    <p class="text-xs text-gray-400 leading-tight mt-0.5">16-module comprehensive
+                                        programme</p>
+                                </div>
+                            </a>
+                            <a href="/cources/clinical-data-management.html"
+                                class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span>
+                                <div>
+                                    <p
+                                        class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">
+                                        Clinical Data Management</p>
+                                    <p class="text-xs text-gray-400 leading-tight mt-0.5">EDC, CDMS & data governance
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="border-t border-gray-100 mt-1 pt-1">
+                                <a href="/cources/AI-in-clinical-research.html"
+                                    class="flex items-start gap-3 px-4 py-2.5 hover:bg-[#fdf3dc] group/item transition-colors no-underline">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 mt-1.5"></span>
+                                    <div>
+                                        <p
+                                            class="text-sm font-medium text-gray-800 group-hover/item:text-[#b8841c] transition-colors leading-tight flex items-center gap-2">
+                                            AI in Clinical Research
+                                            <span
+                                                class="text-[10px] font-bold text-white bg-gold px-1.5 py-0.5 rounded-full leading-none">New</span>
+                                        </p>
+                                        <p class="text-xs text-gray-400 leading-tight mt-0.5">2-month intensive
+                                            programme</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="px-4 pt-2 pb-1">
+                                <a href="/cources.html"
+                                    class="flex items-center justify-center gap-1.5 text-xs font-semibold text-teal bg-light-teal rounded-lg py-2 no-underline hover:bg-teal/20 transition-colors">
+                                    View All Courses →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Admissions -->
+                    <!-- <a href="/admissions"
+                        class="nav-link px-3 py-5 text-sm font-medium text-white/85 hover:text-white transition-colors no-underline">
+                        Admissions
+                    </a> -->
+
+                    <!-- Placement -->
+                    <!-- <a href="/placement"
+                        class="nav-link px-3 py-5 text-sm font-medium text-white/85 hover:text-white transition-colors no-underline">
+                        Placement
+                    </a> -->
+
+                    <!-- Contact -->
+                    <a href="/contact"
+                        class="nav-link px-3 py-5 text-sm font-medium text-white/85 hover:text-white transition-colors no-underline">
+                        Contact
+                    </a>
+
+                </div>
+
+                <!-- ── Right: CTA + Hamburger ── -->
+                <div class="flex items-center gap-3">
+
+                    <!-- Phone pill (desktop only) -->
+                    <a href="tel:+917709364700"
+                        class="hidden xl:flex items-center gap-2 text-white/60 hover:text-white text-xs font-medium transition-colors no-underline border border-white/15 rounded-full px-3 py-1.5">
+                        <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        +91 77093 64700
+                    </a>
+
+                    <!-- Enquire Now button -->
+                    <a href="/enquire"
+                        class="hidden sm:inline-flex items-center gap-1.5 bg-gold text-navy text-sm font-bold px-5 py-2.5 rounded-full no-underline transition-all duration-200 hover:bg-[#e8b93a] hover:-translate-y-0.5 shadow-md shadow-gold/20">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                        Enquire Now
+                    </a>
+
+                    <!-- Hamburger (mobile) -->
+                    <button id="hamburger"
+                        class="lg:hidden flex flex-col gap-[5px] p-2 cursor-pointer bg-transparent border-none"
+                        aria-label="Toggle navigation" onclick="toggleMenu()">
+                        <span id="bar1"
+                            class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+                        <span id="bar2"
+                            class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+                        <span id="bar3"
+                            class="block w-4 h-0.5 bg-white/60 rounded-full transition-all duration-300"></span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════ MOBILE MENU ══════════════ -->
+        <div id="mobile-menu" class="lg:hidden bg-navy border-t border-white/10">
+            <div class="max-w-6xl mx-auto px-5 py-4 space-y-1">
+
+                <a href="/"
+                    class="flex items-center gap-3 px-3 py-3 rounded-lg text-m font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors no-underline">
+                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    Home
+                </a>
+
+                <!-- About accordion -->
+                <div>
+                    <button onclick="toggleAccordion('about-acc')"
+                        class="w-full flex items-center justify-between px-3 py-3 rounded-lg text-m font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors bg-transparent border-none cursor-pointer">
+                        <span class="flex items-center gap-3">
+                            <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            About
+                        </span>
+                        <svg id="about-acc-icon" class="w-4 h-4 text-white/40 transition-transform duration-200"
+                            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="about-acc" class="hidden pl-10 space-y-1 pb-1">
+                        <a href="/about"
+                            class="block px-3 py-2 text-m text-white/65 hover:text-white transition-colors no-underline">About
+                            Us</a>
+                        <a href="/mission"
+                            class="block px-3 py-2 text-m text-white/65 hover:text-white transition-colors no-underline">Our
+                            Mission</a>
+                        <a href="/vision"
+                            class="block px-3 py-2 text-m text-white/65 hover:text-white transition-colors no-underline">Our
+                            Vision</a>
+                    </div>
+                </div>
+
+                <!-- Courses accordion -->
+                <div>
+                    <button onclick="toggleAccordion('courses-acc')"
+                        class="w-full flex items-center justify-between px-3 py-3 rounded-lg text-sm font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors bg-transparent border-none cursor-pointer">
+                        <span class="flex items-center gap-3">
+                            <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                            Courses
+                        </span>
+                        <svg id="courses-acc-icon" class="w-4 h-4 text-white/40 transition-transform duration-200"
+                            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="courses-acc" class="hidden pl-10 space-y-1 pb-1">
+                        <a href="/courses/medical-writing"
+                            class="block px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">Medical
+                            Writing</a>
+                        <a href="/courses/regulatory-affairs"
+                            class="block px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">Regulatory
+                            Affairs</a>
+                        <a href="/courses/pharmacovigilance"
+                            class="block px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">Pharmacovigilance</a>
+                        <a href="/courses/clinical-research"
+                            class="block px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">Clinical
+                            Research</a>
+                        <a href="/courses/clinical-data-management"
+                            class="block px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">Clinical
+                            Data Management</a>
+                        <a href="/courses/ai-clinical-research"
+                            class="flex items-center gap-2 px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">
+                            AI in Clinical Research
+                            <span
+                                class="text-[10px] font-bold text-navy bg-gold px-1.5 py-0.5 rounded-full leading-none">New</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="/admissions"
+                    class="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors no-underline">
+                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Admissions
+                </a>
+
+                <a href="/placement"
+                    class="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors no-underline">
+                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Placement
+                </a>
+
+                <a href="/contact"
+                    class="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors no-underline">
+                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Contact
+                </a>
+
+                <!-- Mobile CTA -->
+                <div class="pt-3 border-t border-white/10">
+                    <a href="/enquire"
+                        class="flex items-center justify-center gap-2 bg-gold text-navy text-sm font-bold py-3 rounded-xl no-underline hover:bg-[#e8b93a] transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                        Enquire Now
+                    </a>
+                    <div class="flex items-center justify-center gap-4 mt-3">
+                        <a href="tel:18001031071"
+                            class="text-xs text-white/50 hover:text-white no-underline transition-colors">1800 103
+                            1071</a>
+                        <span class="text-white/20">·</span>
+                        <a href="mailto:info@saffronindia.org.in"
+                            class="text-xs text-white/50 hover:text-white no-underline transition-colors">info@saffronindia.org.in</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </nav>
+    <!-- ================= COURCE DETAILS SECTION ================= -->
+
+    <!-- HERO -->
+    <div class="hero-bg text-white px-6 py-16 md:py-24 relative">
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="mb-4">
+                <span class="badge">Post Graduate Programme</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">
+                Medical Writing<br><span style="color: var(--gold);">in Clinical Research</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white/70 mb-8 max-w-xl font-light">
+                A comprehensive programme designed to transform healthcare graduates into skilled medical writers for
+                the pharmaceutical and clinical research industry.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <div class="flex items-center gap-2 bg-white/10 rounded-full px-5 py-2 text-sm font-medium">
+                    <svg class="w-4 h-4" style="color:var(--gold)" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" />
+                    </svg>
+                    6–12 Months
+                </div>
+                <div class="flex items-center gap-2 bg-white/10 rounded-full px-5 py-2 text-sm font-medium">
+                    <svg class="w-4 h-4" style="color:var(--gold)" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+                    </svg>
+                    Online Live Classes
+                </div>
+                <div class="flex items-center gap-2 bg-white/10 rounded-full px-5 py-2 text-sm font-medium">
+                    <svg class="w-4 h-4" style="color:var(--gold)" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Industry-Ready
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTRO STRIP -->
+    <div class="highlight-strip text-white py-3 px-6">
+        <div
+            class="max-w-5xl mx-auto flex flex-wrap gap-6 justify-center text-sm font-medium tracking-wide uppercase text-white/80">
+            <span>Drug Regulatory Documents</span><span class="text-white/30">·</span>
+            <span>Clinical Study Reports</span><span class="text-white/30">·</span>
+            <span>Publication Writing</span><span class="text-white/30">·</span>
+            <span>Medical Communications</span>
+        </div>
+    </div>
+
+    <!-- CURRICULUM -->
+    <div class="max-w-5xl mx-auto px-6 py-16">
+        <div class="mb-12">
+            <div class="divider-gold"></div>
+            <h2 class="text-3xl md:text-4xl font-bold" style="color:var(--navy)">Programme Curriculum</h2>
+            <p class="mt-2 text-gray-500">Five progressive modules building from foundations to advanced practice</p>
+        </div>
+
+        <div class="space-y-6">
+
+            <!-- Module 1 -->
+            <div class="module-card rounded-xl p-6 shadow-sm relative">
+                <span class="section-number">01</span>
+                <div class="ml-10">
+                    <span class="badge mb-2 inline-block">Module 1</span>
+                    <h3 class="text-xl font-bold mb-3" style="color:var(--navy)">Introduction to Medical Writing</h3>
+                    <p class="text-sm text-gray-500 mb-4">Learn the basics of medical writing, its role in clinical
+                        research, and the essential skills required.</p>
+                    <div class="flex flex-wrap">
+                        <span class="pill-tag">Overview & Importance</span>
+                        <span class="pill-tag">Types of Medical Writing</span>
+                        <span class="pill-tag">Medical Terminology & Anatomy</span>
+                        <span class="pill-tag">Roles & Responsibilities</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="module-card rounded-xl p-6 shadow-sm relative" style="border-left-color: var(--gold);">
+                <span class="section-number">02</span>
+                <div class="ml-10">
+                    <span class="badge mb-2 inline-block">Module 2</span>
+                    <h3 class="text-xl font-bold mb-3" style="color:var(--navy)">Foundations of Scientific Research</h3>
+                    <p class="text-sm text-gray-500 mb-4">Build a strong foundation in clinical research and
+                        professional document preparation.</p>
+                    <div class="flex flex-wrap">
+                        <span class="pill-tag">Study Designs & Trial Phases</span>
+                        <span class="pill-tag">Biostatistics</span>
+                        <span class="pill-tag">Scientific Literature</span>
+                        <span class="pill-tag">IMRaD Format</span>
+                        <span class="pill-tag">Abstracts & Summaries</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="module-card rounded-xl p-6 shadow-sm relative">
+                <span class="section-number">03</span>
+                <div class="ml-10">
+                    <span class="badge mb-2 inline-block">Module 3</span>
+                    <h3 class="text-xl font-bold mb-3" style="color:var(--navy)">Content Research & Reference Styles
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4">Develop essential research skills using key scientific
+                        databases and reference tools.</p>
+                    <div class="flex flex-wrap">
+                        <span class="pill-tag">PubMed</span>
+                        <span class="pill-tag">MedlinePlus</span>
+                        <span class="pill-tag">EMBase</span>
+                        <span class="pill-tag">BIOSIS</span>
+                        <span class="pill-tag">Mendeley</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 4 -->
+            <div class="module-card rounded-xl p-6 shadow-sm relative" style="border-left-color: var(--gold);">
+                <span class="section-number">04</span>
+                <div class="ml-10">
+                    <span class="badge mb-2 inline-block">Module 4</span>
+                    <h3 class="text-xl font-bold mb-3" style="color:var(--navy)">Medical Communications & Publication
+                        Writing</h3>
+                    <p class="text-sm text-gray-500 mb-4">Master professional writing for journals, conferences, and
+                        patient communication.</p>
+                    <div class="flex flex-wrap">
+                        <span class="pill-tag">Journal Manuscripts</span>
+                        <span class="pill-tag">Review Articles & Case Reports</span>
+                        <span class="pill-tag">Conference Posters</span>
+                        <span class="pill-tag">Lay Summaries</span>
+                        <span class="pill-tag">Peer Review Responses</span>
+                        <span class="pill-tag">ICMJE Guidelines</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 5 -->
+            <div class="module-card rounded-xl p-6 shadow-sm relative">
+                <span class="section-number">05</span>
+                <div class="ml-10">
+                    <span class="badge mb-2 inline-block">Module 5</span>
+                    <h3 class="text-xl font-bold mb-3" style="color:var(--navy)">Advanced Skills & Career Development
+                    </h3>
+                    <p class="text-sm text-gray-500 mb-4">Prepare for real-world work with advanced writing, project
+                        management, and career skills.</p>
+                    <div class="flex flex-wrap">
+                        <span class="pill-tag">Editing & Proofreading</span>
+                        <span class="pill-tag">Project Management</span>
+                        <span class="pill-tag">Stakeholder Collaboration</span>
+                        <span class="pill-tag">Portfolio Building</span>
+                        <span class="pill-tag">Freelancing Pathways</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FINAL PROJECT -->
+    <div class="dot-grid py-14 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                <div class="px-8 py-6" style="background: linear-gradient(90deg, var(--navy), #134e6f);">
+                    <span class="badge mb-2 inline-block">Capstone</span>
+                    <h2 class="text-2xl font-bold text-white">Final Project</h2>
+                    <p class="text-white/60 text-sm mt-1">Complete a full end-to-end medical writing project</p>
+                </div>
+                <div class="p-8 grid md:grid-cols-2 gap-4">
+                    <div class="deliverable-item p-4 flex gap-3 items-start">
+                        <span class="text-xl">📋</span>
+                        <div>
+                            <p class="font-semibold text-sm" style="color:var(--navy)">Protocol</p>
+                            <p class="text-xs text-gray-500">Preparation & review of clinical trial protocol</p>
+                        </div>
+                    </div>
+                    <div class="deliverable-item p-4 flex gap-3 items-start">
+                        <span class="text-xl">📖</span>
+                        <div>
+                            <p class="font-semibold text-sm" style="color:var(--navy)">Investigator's Brochure</p>
+                            <p class="text-xs text-gray-500">Full IB preparation and critical review</p>
+                        </div>
+                    </div>
+                    <div class="deliverable-item p-4 flex gap-3 items-start">
+                        <span class="text-xl">📝</span>
+                        <div>
+                            <p class="font-semibold text-sm" style="color:var(--navy)">Informed Consent Document</p>
+                            <p class="text-xs text-gray-500">ICD preparation aligned with regulatory standards</p>
+                        </div>
+                    </div>
+                    <div class="deliverable-item p-4 flex gap-3 items-start">
+                        <span class="text-xl">🗂️</span>
+                        <div>
+                            <p class="font-semibold text-sm" style="color:var(--navy)">Case Report Form (CRF)</p>
+                            <p class="text-xs text-gray-500">CRF design and detailed review</p>
+                        </div>
+                    </div>
+                    <div class="deliverable-item p-4 flex gap-3 items-start md:col-span-2">
+                        <span class="text-xl">📊</span>
+                        <div>
+                            <p class="font-semibold text-sm" style="color:var(--navy)">Clinical Study Report (CSR)</p>
+                            <p class="text-xs text-gray-500">Complete Clinical Study Report preparation and review</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGRAMME DELIVERABLES -->
+    <div class="max-w-5xl mx-auto px-6 py-16">
+        <div class="mb-10">
+            <div class="divider-gold"></div>
+            <h2 class="text-3xl font-bold">Programme Deliverables</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5">
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4"
+                    style="background:var(--light-teal)">
+                    <svg class="w-5 h-5" style="color:var(--teal)" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                </div>
+                <h4 class="font-semibold mb-1" style="color:var(--navy)">Study Material</h4>
+                <p class="text-sm text-gray-500">Hard copy study material aligned with current industry standards for
+                    all modules.</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4"
+                    style="background:var(--light-teal)">
+                    <svg class="w-5 h-5" style="color:var(--teal)" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                </div>
+                <h4 class="font-semibold mb-1" style="color:var(--navy)">Module Assignments</h4>
+                <p class="text-sm text-gray-500">Practice assignments for each module for evaluation and guided
+                    improvement.</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4"
+                    style="background:var(--light-teal)">
+                    <svg class="w-5 h-5" style="color:var(--teal)" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h4 class="font-semibold mb-1" style="color:var(--navy)">Live Online Sessions</h4>
+                <p class="text-sm text-gray-500">Interactive live classes covering all major topics, flexible for
+                    working professionals.</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4"
+                    style="background:var(--light-teal)">
+                    <svg class="w-5 h-5" style="color:var(--teal)" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h4 class="font-semibold mb-1" style="color:var(--navy)">Weekend Classes</h4>
+                <p class="text-sm text-gray-500">Part-time weekend classes with special doubt-clearing sessions before
+                    exams.</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4"
+                    style="background:var(--light-teal)">
+                    <svg class="w-5 h-5" style="color:var(--teal)" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <h4 class="font-semibold mb-1" style="color:var(--navy)">Continuous Assessment</h4>
+                <p class="text-sm text-gray-500">Regular evaluations to build writing skills and prepare for real job
+                    environments.</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4"
+                    style="background:var(--light-teal)">
+                    <svg class="w-5 h-5" style="color:var(--teal)" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <h4 class="font-semibold mb-1" style="color:var(--navy)">Expert Guest Lectures</h4>
+                <p class="text-sm text-gray-500">Webinars and sessions by industry experts for real-world perspective
+                    and networking.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ELIGIBILITY + FEE -->
+    <div class="max-w-5xl mx-auto px-6 pb-16 grid md:grid-cols-2 gap-6">
+
+        <!-- Eligibility -->
+        <div class="bg-white rounded-2xl shadow-sm p-8 border-t-4" style="border-color:var(--teal)">
+            <div class="divider-gold"></div>
+            <h3 class="text-2xl font-bold mb-4" style="color:var(--navy)">Eligibility</h3>
+            <p class="text-sm text-gray-500 mb-5">Graduates and Post-Graduates in Medical and Healthcare fields are
+                eligible:</p>
+            <div class="flex flex-wrap gap-2">
+                <span class="pill-tag">MBBS</span>
+                <span class="pill-tag">BDS</span>
+                <span class="pill-tag">BAMS</span>
+                <span class="pill-tag">BHMS</span>
+                <span class="pill-tag">Pharm D</span>
+                <span class="pill-tag">M.Pharmacy</span>
+                <span class="pill-tag">B.Pharmacy</span>
+            </div>
+            <div class="mt-6 pt-6 border-t border-gray-100">
+                <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold mb-1">Programme Duration</p>
+                <p class="text-lg font-bold" style="color:var(--navy)">6 to 12 Months</p>
+                <p class="text-sm text-gray-500">Minimum 6 months · Maximum 12 months</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100">
+                <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold mb-1">Language of Instruction
+                </p>
+                <p class="text-sm font-medium" style="color:var(--teal)">English</p>
+            </div>
+        </div>
+
+        <!-- Fee -->
+        <div class="fee-card rounded-2xl shadow-lg p-8 text-white relative z-0">
+            <p class="text-xs uppercase tracking-widest text-white/50 font-semibold mb-2">Programme Fee</p>
+            <h3 class="text-2xl font-bold mb-1">Professional Certification</h3>
+            <p class="text-white/60 text-sm mb-6">Full Time / Part Time · Online Live Classes</p>
+            <div class="mb-2">
+                <span class="text-5xl font-black" style="color:var(--gold)">₹55,000</span>
+            </div>
+            <p class="text-white/50 text-sm mb-8">or <span class="text-white font-semibold">$598 USD</span></p>
+            <div class="space-y-3">
+                <div class="flex items-center gap-3 text-sm text-white/80">
+                    <svg class="w-4 h-4 flex-shrink-0" style="color:var(--gold)" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Hard copy study materials included
+                </div>
+                <div class="flex items-center gap-3 text-sm text-white/80">
+                    <svg class="w-4 h-4 flex-shrink-0" style="color:var(--gold)" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Live interactive sessions with experts
+                </div>
+                <div class="flex items-center gap-3 text-sm text-white/80">
+                    <svg class="w-4 h-4 flex-shrink-0" style="color:var(--gold)" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Capstone project with industry documents
+                </div>
+                <div class="flex items-center gap-3 text-sm text-white/80">
+                    <svg class="w-4 h-4 flex-shrink-0" style="color:var(--gold)" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Postgraduate Diploma certificate
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+ <!-- ================= GET IN TOUCH ================= -->
+    <div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+
+        <!-- Modal Box -->
+        <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full mx-4 overflow-hidden relative">
+
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl">
+                <i class="fas fa-xmark text-md"></i>
+            </button>
+
+            <div class="grid md:grid-cols-2">
+
+                <!-- Left Image -->
+                <div class="hidden md:block">
+                    <img src="assets/images/Get in touch-pana.svg" alt="Clinical Research"
+                        class="h-full w-full object-contain">
+                </div>
+
+                <!-- Right Form -->
+                <div class="p-8 bg-blue-900">
+                    <h2 class="text-2xl font-bold text-white mb-6">
+                        Get In Touch
+                    </h2>
+
+                    <form class="space-y-4">
+
+                        <input type="text" placeholder="Full Name"
+                            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required />
+
+                        <input type="tel" placeholder="Mobile Number"
+                            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required />
+
+                        <input type="email" placeholder="Email Address"
+                            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required />
+
+                        <textarea rows="4" placeholder="Your Message"
+                            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required></textarea>
+
+                        <button type="submit"
+                            class="w-full px-8 py-2 bg-white text-blue-900 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
+                            Submit
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/917709364700?text=Hello%21%20I%20am%20interested%20in%20your%20courses.%20Please%20guide%20me."
+        class="fixed bottom-10 right-2 bg-white rounded-[50%] py-2 px-1 hover:scale-105 transition duration-300"
+        target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-4xl" style="color: rgb(2, 117, 66);"></i>
+    </a>
+<!-- ================= FOOTER ================= -->
+  <footer class="footer-main">
+
+        <!-- Top accent line -->
+        <div style="height:3px; background: linear-gradient(90deg, var(--teal), var(--gold), var(--teal));"></div>
+
+        <!-- Main footer content -->
+        <div class="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Col 1: Brand -->
+            <div>
+                <div class="footer-logo-text mb-2">Saffron <span>IICRT</span></div>
+                <div class="gold-pill">Est. Since 2010</div>
+                <p style="color:rgba(255,255,255,0.55); font-size:0.85rem; line-height:1.7;">
+                    Practical-based clinical research training institute preparing professionals for healthcare
+                    industries.
+                </p>
+                <div class="mt-5 pt-5" style="border-top:1px solid rgba(255,255,255,0.08)">
+                    <p
+                        style="color:rgba(255,255,255,0.35); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">
+                        Recognised By</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.6); font-size:0.72rem; padding:4px 10px; border-radius:6px; font-weight:500;">ISO
+                            Certified</span>
+                        <span
+                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.6); font-size:0.72rem; padding:4px 10px; border-radius:6px; font-weight:500;">GCP
+                            Compliant</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div>
+                <p class="footer-heading">Quick Links</p>
+                <a href="/" class="footer-link">
+                    <span style="color:var(--teal); margin-right:6px;">›</span> Home
+                </a>
+                <a href="/cources.html" class="footer-link">
+                    <span style="color:var(--teal); margin-right:6px;">›</span> Courses
+                </a>
+                <a href="/aboutus.html" class="footer-link">
+                    <span style="color:var(--teal); margin-right:6px;">›</span> About
+                </a>
+                <a href="#" class="footer-link">
+                    <span style="color:var(--teal); margin-right:6px;">›</span> Contact
+                </a>
+                <div class="footer-divider my-4"></div>
+                <p class="footer-heading" style="margin-top:1rem;">Our Programmes</p>
+                <a href="/cources/medical-writing.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Medical
+                    Writing</a>
+                <a href="/cources/regulatory-affairs.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Regulatory
+                    Affairs</a>
+                <a href="/cources/pharmacovigilance.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span>
+                    Pharmacovigilance</a>
+                <a href="/cources/clinical-research.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Clinical
+                    Research</a>
+                <a href="/cources/clinical-data-management.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Clinical
+                    Data Management</a>
+            </div>
+
+            <!-- Col 3: Contact -->
+            <div>
+                <p class="footer-heading">Contact</p>
+
+                <div class="footer-contact-row">
+                    <div class="footer-contact-icon">
+                        <svg class="w-4 h-4" style="color:var(--teal)" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="footer-contact-text">
+                        <a href="mailto:info@saffronindia.org.in">info@saffronindia.org.in</a><br>
+                        <a href="mailto:placement@saffronindia.org.in">placement@saffronindia.org.in</a>
+                    </div>
+                </div>
+
+                <div class="footer-contact-row">
+                    <div class="footer-contact-icon">
+                        <svg class="w-4 h-4" style="color:var(--teal)" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                    </div>
+                    <div class="footer-contact-text">
+                        <a href="tel:18001031071">18001031071 (Toll Free)</a><br>
+                        <a href="tel:+917709364700">+91 7709364700</a>
+                    </div>
+                </div>
+
+                <div class="footer-contact-row">
+                    <div class="footer-contact-icon">
+                        <svg class="w-4 h-4" style="color:var(--teal)" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <div class="footer-contact-text">
+                        Saffron India Institute of Clinical Research & Technology,<br>
+                        C-6, Narhe Institutional Area,<br>
+                        Narhe, Pune, Maharashtra – 411041, India
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 4: Follow Us -->
+            <div>
+                <p class="footer-heading">Follow Us</p>
+                <div class="flex flex-col">
+                    <a href="#" class="social-btn">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                        Facebook
+                    </a>
+                    <a href="#" class="social-btn">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="#" class="social-btn">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                        Instagram
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <div class="mt-6 p-4 rounded-xl"
+                    style="background:rgba(14,124,123,0.15); border:1px solid rgba(14,124,123,0.25);">
+                    <p style="color:white; font-size:0.82rem; font-weight:600; margin-bottom:8px;">Ready to start your
+                        career?</p>
+                    <a onclick="openModal()" class="enquire-btn"
+                        style="font-size:0.78rem; padding:8px 18px; display:inline-block;">Enquire Now →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider mx-6"></div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom px-6 py-5">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+                <p style="color:rgba(255,255,255,0.35); font-size:0.78rem; letter-spacing:0.04em;">
+                    © 2026 Saffron IICRT. All rights reserved.
+                </p>
+                <div class="flex gap-5">
+                    <a href="#"
+                        style="color:rgba(255,255,255,0.35); font-size:0.78rem; text-decoration:none; transition:color 0.2s;"
+                        onmouseover="this.style.color='rgba(255,255,255,0.7)'"
+                        onmouseout="this.style.color='rgba(255,255,255,0.35)'">Privacy Policy</a>
+                    <a href="#"
+                        style="color:rgba(255,255,255,0.35); font-size:0.78rem; text-decoration:none; transition:color 0.2s;"
+                        onmouseover="this.style.color='rgba(255,255,255,0.7)'"
+                        onmouseout="this.style.color='rgba(255,255,255,0.35)'">Terms of Use</a>
+                    <a href="#"
+                        style="color:rgba(255,255,255,0.35); font-size:0.78rem; text-decoration:none; transition:color 0.2s;"
+                        onmouseover="this.style.color='rgba(255,255,255,0.7)'"
+                        onmouseout="this.style.color='rgba(255,255,255,0.35)'">Sitemap</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+<script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+
+        function openModal() {
+            toggleMenu();
+            document.getElementById("popupModal").classList.remove("hidden");
+            document.getElementById("popupModal").classList.add("flex");
+        }
+
+        function closeModal() {
+            document.getElementById("popupModal").classList.remove("flex");
+            document.getElementById("popupModal").classList.add("hidden");
+        }
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+
+            if (menu.classList.contains("max-h-0")) {
+                menu.classList.remove("max-h-0");
+                menu.classList.add("max-h-screen");
+            } else {
+                menu.classList.remove("max-h-screen");
+                menu.classList.add("max-h-0");
+            }
+        }
+    </script>
+    <script>
+        // Mobile menu toggle
+        let menuOpen = false;
+        function toggleMenu() {
+            menuOpen = !menuOpen;
+            const menu = document.getElementById('mobile-menu');
+            const bar1 = document.getElementById('bar1');
+            const bar2 = document.getElementById('bar2');
+            const bar3 = document.getElementById('bar3');
+            menu.classList.toggle('open', menuOpen);
+            if (menuOpen) {
+                bar1.style.transform = 'translateY(6.5px) rotate(45deg)';
+                bar2.style.transform = 'translateY(-6.5px) rotate(-45deg)';
+                bar3.style.opacity = '0';
+            } else {
+                bar1.style.transform = '';
+                bar2.style.transform = '';
+                bar3.style.opacity = '';
+            }
+        }
+
+        // Accordion toggles for mobile
+        function toggleAccordion(id) {
+            const el = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+            const isHidden = el.classList.contains('hidden');
+            el.classList.toggle('hidden', !isHidden);
+            icon.style.transform = isHidden ? 'rotate(180deg)' : '';
+        }
+
+        // Navbar scroll shadow enhancement
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-[0_4px_32px_rgba(11,31,58,0.45)]');
+            } else {
+                nav.classList.remove('shadow-[0_4px_32px_rgba(11,31,58,0.45)]');
+            }
+        });
+    </script>
+</body>
+
+</html>
