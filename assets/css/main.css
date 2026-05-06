@@ -42,6 +42,9 @@
   --nav-dropdown-hover-color: #099aa7;
   /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
+.d-none{
+  display: none !important;
+}
 
 /* Dropdown animation */
 .dropdown-menu {
@@ -552,4 +555,14 @@ h3 {
 
 .footer-bottom {
   background: rgba(0, 0, 0, 0.25);
+}
+.header-btn {
+    display: inline-block;
+  }
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .header-btn {
+    display: none;
+  }
 }
