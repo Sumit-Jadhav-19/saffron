@@ -4,17 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Advanced HealthTech Consultant Program – Saffron Indian Institute</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
     <link href="assets/vender/fontawesome-free/css/all.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -36,40 +34,334 @@
             }
         }
     </script>
+    <style>
+        :root {
+            --navy: #0b2979;
+            --teal: #0E7C7B;
+            --gold: #D4A843;
+            --light-teal: #E8F5F5;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0b2979 0%, #0E7C7B 100%);
+        }
+
+        .hero-bg .circuit {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(212, 168, 67, 0.12) 1.5px, transparent 1.5px);
+            background-size: 36px 36px;
+            opacity: 0.6;
+        }
+
+        .highlight-strip {
+            background: linear-gradient(90deg, var(--teal), #0B1F3A);
+        }
+
+        .feature-card {
+            background: white;
+            border-left: 4px solid var(--teal);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(11, 31, 58, 0.12);
+        }
+
+        .feature-card.gold {
+            border-left-color: var(--gold);
+        }
+
+        .badge {
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .pill-tag {
+            background: rgba(14, 124, 123, 0.1);
+            color: var(--teal);
+            border: 1px solid rgba(14, 124, 123, 0.25);
+            font-size: 0.78rem;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 3px;
+        }
+
+        .divider-gold {
+            height: 3px;
+            width: 60px;
+            background: var(--gold);
+            border-radius: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .dot-grid {
+            background-image: radial-gradient(circle, rgba(14, 124, 123, 0.15) 1px, transparent 1px);
+            background-size: 22px 22px;
+        }
+
+        .career-card {
+            background: white;
+            border-top: 3px solid var(--teal);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .career-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(11, 31, 58, 0.13);
+        }
+
+        .outcome-item {
+            background: var(--light-teal);
+            border-radius: 10px;
+            transition: background 0.2s;
+        }
+
+        .outcome-item:hover {
+            background: #d0ecec;
+        }
+
+        .fee-card {
+            background: linear-gradient(135deg, var(--navy) 0%, #0E7C7B 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fee-card::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(212, 168, 67, 0.15);
+        }
+
+        .authority-badge {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: var(--teal);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-number.gold-bg {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .ai-area-card {
+            background: white;
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 2px 12px rgba(11, 31, 58, 0.07);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-bottom: 3px solid var(--teal);
+        }
+
+        .ai-area-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(11, 31, 58, 0.13);
+        }
+
+        .ai-area-card.gold-bottom {
+            border-bottom-color: var(--gold);
+        }
+
+        /* Footer styles */
+        .footer-main {
+            background: #071a4a;
+        }
+
+        .footer-heading {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
+        }
+
+        .footer-link {
+            display: block;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+            text-decoration: none;
+            padding: 4px 0;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-contact-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 14px;
+            align-items: flex-start;
+        }
+
+        .footer-contact-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            background: rgba(14, 124, 123, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .footer-contact-text {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.6;
+        }
+
+        .footer-contact-text a {
+            color: rgba(255, 255, 255, 0.55);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-contact-text a:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-logo-text {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: white;
+        }
+
+        .footer-logo-text span {
+            color: var(--gold);
+        }
+
+        .gold-pill {
+            background: rgba(212, 168, 67, 0.15);
+            color: var(--gold);
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            letter-spacing: 0.06em;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+            text-decoration: none;
+            padding: 6px 0;
+            transition: color 0.2s;
+        }
+
+        .social-btn:hover {
+            color: var(--gold);
+        }
+
+        .enquire-btn {
+            background: linear-gradient(135deg, var(--gold), #c8921a);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 10px 22px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .enquire-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(212, 168, 67, 0.4);
+        }
+
+        /* Dropdown */
+        .dropdown:hover .dropdown-menu,
+        .dropdown .dropdown-menu:hover {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+        }
+
+        #mobile-menu {
+            display: none;
+        }
+
+        #mobile-menu.open {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
 
-     <div class="topbar bg-navy border-b border-white/10 px-4 py-1.5 hidden md:block">
+    <!-- TOPBAR -->
+    <div class="topbar bg-navy border-b border-white/10 px-4 py-1.5 hidden md:block">
         <div class="max-w-6xl mx-auto flex items-center justify-between">
-
-            <!-- Left: contact -->
             <div class="flex items-center gap-5">
-                <!-- <a href="tel:18001031071"
-                    class="flex items-center gap-1.5 text-white/55 hover:text-white text-xs transition-colors no-underline">
-                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    1800 103 1071 (Toll Free)
-                </a> -->
                 <a href="mailto:info@saffronindia.org.in"
                     class="flex items-center gap-1.5 text-white/55 hover:text-white text-xs transition-colors no-underline">
-                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
+                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                     info@saffronindia.org.in
                 </a>
             </div>
-
-            <!-- Right: certifications + social -->
             <div class="flex items-center gap-4">
                 <span class="flex items-center gap-1.5 text-white/55 text-xs">
-                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
+                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
@@ -77,11 +369,9 @@
                 </span>
                 <span class="w-px h-3 bg-white/20"></span>
                 <span class="flex items-center gap-1.5 text-white/55 text-xs">
-                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
+                    <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <rect x="2" y="7" width="20" height="14" rx="2" />
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
                     </svg>
                     MSME Certified
                 </span>
@@ -89,685 +379,565 @@
                 <div class="flex items-center gap-3">
                     <a href="#" class="text-white/45 hover:text-gold transition-colors" aria-label="Facebook">
                         <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                         </svg>
                     </a>
                     <a href="#" class="text-white/45 hover:text-gold transition-colors" aria-label="LinkedIn">
                         <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                         </svg>
                     </a>
                     <a href="#" class="text-white/45 hover:text-gold transition-colors" aria-label="Instagram">
                         <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                         </svg>
                     </a>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <!-- ══════════════════════════════════════
-     MAIN NAVBAR
-══════════════════════════════════════ -->
+    <!-- NAVBAR -->
     <nav class="sticky top-0 z-50 bg-navy shadow-[0_2px_24px_rgba(11,31,58,0.35)]" id="navbar">
-        <!-- Gold top accent line -->
         <div class="h-[3px] bg-gradient-to-r from-gray via-gray to-gray"></div>
-
         <div class="max-w-6xl mx-auto px-5 py-0">
             <div class="flex items-center justify-between h-16">
-
-                <!-- ── Logo ── -->
                 <a href="/" class="flex items-center gap-3 no-underline group">
-                    <!-- Icon mark -->
-                    <div class="w-12 h-12 rounded-lg flex items-center justify-center ">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center">
                         <img src="../assets/images/saffronlogo.png" />
                     </div>
-                    <!-- Text -->
                     <div>
-                        <span
-                            class="font-display font-black text-white text-3xl leading-none tracking-tight group-hover:text-gold transition-colors">
-                            Saffron
-                        </span>
+                        <span class="font-display font-black text-white text-3xl leading-none tracking-tight group-hover:text-gold transition-colors">Saffron</span>
                         <span class="font-display font-black text-gold text-xl leading-none"> Indian Institute</span>
-                        <p class="text-gold text-[11px] font-medium tracking-widest uppercase leading-none mt-0.5">
-                            Of Clinical Research & Technology</p>
+                        <p class="text-gold text-[11px] font-medium tracking-widest uppercase leading-none mt-0.5">Of Clinical Research & Technology</p>
                     </div>
                 </a>
-
-                <!-- ── Desktop Nav Links ── -->
                 <div class="hidden lg:flex items-center gap-1">
-
-                    <!-- Home -->
-                    <a href="/"
-                        class="nav-link active px-3 py-5 text-m font-medium text-white/85 hover:text-white transition-colors no-underline">
-                        Home
-                    </a>
-
-                    <!-- About dropdown -->
+                    <a href="/" class="nav-link active px-3 py-5 text-m font-medium text-white/85 hover:text-white transition-colors no-underline">Home</a>
                     <div class="dropdown relative">
-                        <button
-                            class="nav-link flex items-center gap-1 px-3 py-5 text-m font-medium text-white/85 hover:text-white transition-colors bg-transparent border-none cursor-pointer">
+                        <button class="nav-link flex items-center gap-1 px-3 py-5 text-m font-medium text-white/85 hover:text-white transition-colors bg-transparent border-none cursor-pointer">
                             About
-                            <svg class="w-3.5 h-3.5 text-white/50" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <svg class="w-3.5 h-3.5 text-white/50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                         </button>
-                        <div
-                            class="dropdown-menu absolute top-full left-0 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 z-50">
-                            <div class="px-3 py-1.5 mb-1">
-                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">About Saffron
-                                </p>
-                            </div>
-                            <a href="/aboutus.html"
-                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-light-teal hover:text-teal transition-colors no-underline">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span> About Us
-                            </a>
-                            <a href="/ourmission.html"
-                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-light-teal hover:text-teal transition-colors no-underline">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span> Our Mission
-                            </a>
-                            <a href="/ourvission.html"
-                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-light-teal hover:text-teal transition-colors no-underline">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span> Our Vision
-                            </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 z-50">
+                            <div class="px-3 py-1.5 mb-1"><p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">About Saffron</p></div>
+                            <a href="/aboutus.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-light-teal hover:text-teal transition-colors no-underline"><span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span> About Us</a>
+                            <a href="/ourmission.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-light-teal hover:text-teal transition-colors no-underline"><span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span> Our Mission</a>
+                            <a href="/ourvission.html" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-light-teal hover:text-teal transition-colors no-underline"><span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span> Our Vision</a>
                         </div>
                     </div>
-
-                    <!-- Courses dropdown -->
                     <div class="dropdown relative">
-                        <button
-                            class="nav-link flex items-center gap-1 px-3 py-5 text-m font-medium text-white/85 hover:text-white transition-colors bg-transparent border-none cursor-pointer">
+                        <button class="nav-link flex items-center gap-1 px-3 py-5 text-m font-medium text-white/85 hover:text-white transition-colors bg-transparent border-none cursor-pointer">
                             Courses
-                            <svg class="w-3.5 h-3.5 text-white/50" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <svg class="w-3.5 h-3.5 text-white/50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                         </button>
-                        <div
-                            class="dropdown-menu absolute top-full left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 z-50">
-                            <div class="px-3 py-1.5 mb-1">
-                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">PG Diploma
-                                    Programmes</p>
-                            </div>
-                            <a href="/cources/medical-writing.html"
-                                class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span>
-                                <div>
-                                    <p
-                                        class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">
-                                        Medical Writing</p>
-                                    <p class="text-xs text-gray-400 leading-tight mt-0.5">in Clinical Research (Drug)
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="/cources/medical-writing.html"
-                                class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span>
-                                <div>
-                                    <p
-                                        class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">
-                                        Medical Writing</p>
-                                    <p class="text-xs text-gray-400 leading-tight mt-0.5">in Clinical Research (Medical
-                                        Devices)
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="/cources/regulatory-affairs.html"
-                                class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span>
-                                <div>
-                                    <p
-                                        class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">
-                                        Regulatory Affairs</p>
-                                    <p class="text-xs text-gray-400 leading-tight mt-0.5">Global regulatory frameworks
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="/cources/pharmacovigilance.html"
-                                class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span>
-                                <div>
-                                    <p
-                                        class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">
-                                        Pharmacovigilance</p>
-                                    <p class="text-xs text-gray-400 leading-tight mt-0.5">Drug safety & ADR reporting
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="/cources/clinical-research.html"
-                                class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span>
-                                <div>
-                                    <p
-                                        class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">
-                                        Clinical Research</p>
-                                    <p class="text-xs text-gray-400 leading-tight mt-0.5">16-module comprehensive
-                                        programme</p>
-                                </div>
-                            </a>
-                            <a href="/cources/clinical-data-management.html"
-                                class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline">
-                                <span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span>
-                                <div>
-                                    <p
-                                        class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">
-                                        Clinical Data Management</p>
-                                    <p class="text-xs text-gray-400 leading-tight mt-0.5">EDC, CDMS & data governance
-                                    </p>
-                                </div>
-                            </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 z-50">
+                            <div class="px-3 py-1.5 mb-1"><p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">PG Diploma Programmes</p></div>
+                            <a href="/cources/medical-writing.html" class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline"><span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">Medical Writing</p><p class="text-xs text-gray-400 leading-tight mt-0.5">in Clinical Research (Drug)</p></div></a>
+                            <a href="/cources/regulatory-affairs.html" class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline"><span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">Regulatory Affairs</p><p class="text-xs text-gray-400 leading-tight mt-0.5">Global regulatory frameworks</p></div></a>
+                            <a href="/cources/pharmacovigilance.html" class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline"><span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">Pharmacovigilance</p><p class="text-xs text-gray-400 leading-tight mt-0.5">Drug safety & ADR reporting</p></div></a>
+                            <a href="/cources/clinical-research.html" class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline"><span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">Clinical Research</p><p class="text-xs text-gray-400 leading-tight mt-0.5">16-module comprehensive programme</p></div></a>
+                            <a href="/cources/clinical-data-management.html" class="flex items-start gap-3 px-4 py-2.5 hover:bg-light-teal group/item transition-colors no-underline"><span class="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0 mt-1.5"></span><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-teal transition-colors leading-tight">Clinical Data Management</p><p class="text-xs text-gray-400 leading-tight mt-0.5">EDC, CDMS & data governance</p></div></a>
                             <div class="border-t border-gray-100 mt-1 pt-1">
-                                <a href="/cources/AI-in-clinical-research.html"
-                                    class="flex items-start gap-3 px-4 py-2.5 hover:bg-[#fdf3dc] group/item transition-colors no-underline">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 mt-1.5"></span>
-                                    <div>
-                                        <p
-                                            class="text-sm font-medium text-gray-800 group-hover/item:text-[#b8841c] transition-colors leading-tight flex items-center gap-2">
-                                            AI in Clinical Research
-                                            <span
-                                                class="text-[10px] font-bold text-white bg-gold px-1.5 py-0.5 rounded-full leading-none">New</span>
-                                        </p>
-                                        <p class="text-xs text-gray-400 leading-tight mt-0.5">2-month intensive
-                                            programme</p>
-                                    </div>
-                                </a>
+                                <a href="/cources/advanced-healthTech-consultant-program.html" class="flex items-start gap-3 px-4 py-2.5 hover:bg-[#fdf3dc] group/item transition-colors no-underline"><span class="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 mt-1.5"></span><div><p class="text-sm font-medium text-gray-800 group-hover/item:text-[#b8841c] transition-colors leading-tight flex items-center gap-2">Advanced HealthTech Consultant <span class="text-[10px] font-bold text-white bg-gold px-1.5 py-0.5 rounded-full leading-none">New</span></p><p class="text-xs text-gray-400 leading-tight mt-0.5">Digital health & emerging tech</p></div></a>
                             </div>
                             <div class="px-4 pt-2 pb-1">
-                                <a href="/cources.html"
-                                    class="flex items-center justify-center gap-1.5 text-xs font-semibold text-teal bg-light-teal rounded-lg py-2 no-underline hover:bg-teal/20 transition-colors">
-                                    View All Courses →
-                                </a>
+                                <a href="/cources.html" class="flex items-center justify-center gap-1.5 text-xs font-semibold text-teal bg-light-teal rounded-lg py-2 no-underline hover:bg-teal/20 transition-colors">View All Courses →</a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Admissions -->
-                    <!-- <a href="/admissions"
-                        class="nav-link px-3 py-5 text-sm font-medium text-white/85 hover:text-white transition-colors no-underline">
-                        Admissions
-                    </a> -->
-
-                    <!-- Placement -->
-                    <!-- <a href="/placement"
-                        class="nav-link px-3 py-5 text-sm font-medium text-white/85 hover:text-white transition-colors no-underline">
-                        Placement
-                    </a> -->
-
-                    <!-- Contact -->
-                    <a href="/contact.html"
-                        class="nav-link px-3 py-5 text-sm font-medium text-white/85 hover:text-white transition-colors no-underline">
-                        Contact
-                    </a>
-
+                    <a href="/contact.html" class="nav-link px-3 py-5 text-sm font-medium text-white/85 hover:text-white transition-colors no-underline">Contact</a>
                 </div>
-
-                <!-- ── Right: CTA + Hamburger ── -->
                 <div class="flex items-center gap-3">
-
-                    <!-- Phone pill (desktop only) -->
-                    <a href="tel:+917709364700"
-                        class="hidden xl:flex items-center gap-2 text-white/60 hover:text-white text-xs font-medium transition-colors no-underline border border-white/15 rounded-full px-3 py-1.5">
-                        <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
+                    <a href="tel:+917709364700" class="hidden xl:flex items-center gap-2 text-white/60 hover:text-white text-xs font-medium transition-colors no-underline border border-white/15 rounded-full px-3 py-1.5">
+                        <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                         +91 77093 64700
                     </a>
-
-                    <!-- Enquire Now button -->
-                    <button type="button" onclick="openModal()" class="hidden md:block enquire-btn">Enquire Now
-                        →</button>
-
-                    <!-- Hamburger (mobile) -->
-                    <button id="hamburger"
-                        class="lg:hidden flex flex-col gap-[5px] p-2 cursor-pointer bg-transparent border-none"
-                        aria-label="Toggle navigation" onclick="toggleMenu()">
-                        <span id="bar1"
-                            class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
-                        <span id="bar2"
-                            class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
-                        <span id="bar3"
-                            class="block w-4 h-0.5 bg-white/60 rounded-full transition-all duration-300"></span>
+                    <button type="button" onclick="openModal()" class="hidden md:block enquire-btn">Enquire Now →</button>
+                    <button id="hamburger" class="lg:hidden flex flex-col gap-[5px] p-2 cursor-pointer bg-transparent border-none" aria-label="Toggle navigation" onclick="toggleMenu()">
+                        <span id="bar1" class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+                        <span id="bar2" class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+                        <span id="bar3" class="block w-4 h-0.5 bg-white/60 rounded-full transition-all duration-300"></span>
                     </button>
-
                 </div>
             </div>
         </div>
-
-        <!-- ══════════════ MOBILE MENU ══════════════ -->
+        <!-- MOBILE MENU -->
         <div id="mobile-menu" class="lg:hidden bg-navy border-t border-white/10">
             <div class="max-w-6xl mx-auto px-5 py-4 space-y-1">
-
-                <a href="/"
-                    class="flex items-center gap-3 px-3 py-3 rounded-lg text-m font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors no-underline">
-                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
-                    Home
-                </a>
-
-                <!-- About accordion -->
-                <div>
-                    <button onclick="toggleAccordion('about-acc')"
-                        class="w-full flex items-center justify-between px-3 py-3 rounded-lg text-m font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors bg-transparent border-none cursor-pointer">
-                        <span class="flex items-center gap-3">
-                            <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            About
-                        </span>
-                        <svg id="about-acc-icon" class="w-4 h-4 text-white/40 transition-transform duration-200"
-                            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div id="about-acc" class="hidden pl-10 space-y-1 pb-1">
-                        <a href="/aboutus.html"
-                            class="block px-3 py-2 text-m text-white/65 hover:text-white transition-colors no-underline">About
-                            Us</a>
-                        <a href="/ourmission.html"
-                            class="block px-3 py-2 text-m text-white/65 hover:text-white transition-colors no-underline">Our
-                            Mission</a>
-                        <a href="/ourvission.html"
-                            class="block px-3 py-2 text-m text-white/65 hover:text-white transition-colors no-underline">Our
-                            Vision</a>
-                    </div>
-                </div>
-
-                <!-- Courses accordion -->
-                <div>
-                    <button onclick="toggleAccordion('courses-acc')"
-                        class="w-full flex items-center justify-between px-3 py-3 rounded-lg text-sm font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors bg-transparent border-none cursor-pointer">
-                        <span class="flex items-center gap-3">
-                            <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                            </svg>
-                            Courses
-                        </span>
-                        <svg id="courses-acc-icon" class="w-4 h-4 text-white/40 transition-transform duration-200"
-                            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div id="courses-acc" class="hidden pl-10 space-y-1 pb-1">
-                        <a href="/cources/medical-writing.html"
-                            class="block px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">Medical
-                            Writing(Drug)</a>
-                        <a href="/cources/medical-writing-devices.html"
-                            class="block px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">Medical
-                            Writing(Medical Devices)</a>
-                        <a href="/cources/regulatory-affairs.html"
-                            class="block px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">Regulatory
-                            Affairs</a>
-                        <a href="/cources/pharmacovigilance.html"
-                            class="block px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">Pharmacovigilance</a>
-                        <a href="/cources/clinical-research.html"
-                            class="block px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">Clinical
-                            Research</a>
-                        <a href="/cources/clinical-data-management.html"
-                            class="block px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">Clinical
-                            Data Management</a>
-                        <a href="/cources/AI-in-clinical-research.html"
-                            class="flex items-center gap-2 px-3 py-2 text-sm text-white/65 hover:text-white transition-colors no-underline">
-                            AI in Clinical Research
-                            <span
-                                class="text-[10px] font-bold text-navy bg-gold px-1.5 py-0.5 rounded-full leading-none">New</span>
-                        </a>
-                        <a href="/cources.html"
-                            class="flex items-center justify-center gap-1.5 text-xs font-semibold text-white rounded-lg py-2 no-underline hover:bg-teal/20 transition-colors">
-                            View All Courses →
-                        </a>
-                    </div>
-                </div>
-
-                <!-- <a href="/admissions"
-                    class="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors no-underline">
-                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    Admissions
-                </a> -->
-
-                <!-- <a href="/placement"
-                    class="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors no-underline">
-                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    Placement
-                </a> -->
-
-                <a href="/contact.html"
-                    class="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors no-underline">
-                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    Contact
-                </a>
-
-                <!-- Mobile CTA -->
+                <a href="/" class="flex items-center gap-3 px-3 py-3 rounded-lg text-m font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors no-underline">Home</a>
+                <a href="/contact.html" class="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white/85 hover:bg-white/[0.06] hover:text-white transition-colors no-underline">Contact</a>
                 <div class="pt-3 border-t border-white/10">
-                    <button type="button" onclick="openModal()" class="enquire-btn"
-                        style="font-size:0.78rem; padding:8px 18px; display:inline-block;">Enquire Now →</button>
-                    <div class="flex items-center justify-center gap-4 mt-3">
-                        <a href="tel:18001031071"
-                            class="text-xs text-white/50 hover:text-white no-underline transition-colors">1800 103
-                            1071</a>
-                        <span class="text-white/20">·</span>
-                        <a href="mailto:info@saffronindia.org.in"
-                            class="text-xs text-white/50 hover:text-white no-underline transition-colors">info@saffronindia.org.in</a>
-                    </div>
+                    <button type="button" onclick="openModal()" class="enquire-btn" style="font-size:0.78rem; padding:8px 18px; display:inline-block;">Enquire Now →</button>
                 </div>
-
             </div>
         </div>
-
     </nav>
-    <!-- ================= COURCE DETAILS SECTION ================= -->
-    
 
-   
- <!-- ================= GET IN TOUCH ================= -->
-    <div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <!-- ================= HERO ================= -->
+    <div class="hero-bg text-white px-6 py-16 md:py-24 relative">
+        <div class="circuit"></div>
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="mb-4 flex gap-2 flex-wrap">
+                <span class="badge">Professional Certification</span>
+                <span class="bg-white/10 text-white/80 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Powered by Saffron</span>
+                <span class="bg-white/10 text-white/80 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">⚡ 5-Module Programme</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">
+                Advanced<br><span style="color: var(--gold);">HealthTech Consultant</span><br>Program
+            </h1>
+            <p class="text-lg md:text-xl text-white/70 mb-8 max-w-xl font-light">
+                Master emerging technologies transforming Life Sciences and Healthcare — from AI/ML and blockchain to digital health systems and IoMT — and lead digital transformation initiatives across the industry.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-8">
+                <span class="authority-badge">🖥️ Digital Health Systems</span>
+                <span class="authority-badge">🤖 AI/ML in Pharma</span>
+                <span class="authority-badge">🔗 Blockchain in Healthcare</span>
+                <span class="authority-badge">💡 Healthcare Innovation</span>
+            </div>
+            <div class="flex flex-wrap gap-4">
+                <div class="flex items-center gap-2 bg-white/10 rounded-full px-5 py-2 text-sm font-medium">
+                    <svg class="w-4 h-4" style="color:var(--gold)" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" /></svg>
+                    5-Module Programme
+                </div>
+                <div class="flex items-center gap-2 bg-white/10 rounded-full px-5 py-2 text-sm font-medium">
+                    <svg class="w-4 h-4" style="color:var(--gold)" fill="currentColor" viewBox="0 0 20 20"><path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" /></svg>
+                    Online Live Classes
+                </div>
+                <div class="flex items-center gap-2 bg-white/10 rounded-full px-5 py-2 text-sm font-medium">
+                    <svg class="w-4 h-4" style="color:var(--gold)" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Industry-Focused
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Modal Box -->
-        <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full mx-4 overflow-hidden relative">
+    <!-- STRIP -->
+    <div class="highlight-strip text-white py-3 px-6">
+        <div class="max-w-5xl mx-auto flex flex-wrap gap-6 justify-center text-sm font-medium tracking-wide uppercase text-white/80">
+            <span>LSH Tech</span><span class="text-white/30">·</span>
+            <span>Digital Health</span><span class="text-white/30">·</span>
+            <span>AI/ML in Healthcare</span><span class="text-white/30">·</span>
+            <span>Blockchain</span><span class="text-white/30">·</span>
+            <span>HealthTech Innovation</span>
+        </div>
+    </div>
 
-            <!-- Close Button -->
-            <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl">
-                <i class="fas fa-xmark text-md"></i>
-            </button>
+    <!-- ABOUT SECTION -->
+    <div class="max-w-5xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+            <div>
+                <div class="divider-gold"></div>
+                <h2 class="text-3xl font-bold mb-4">About the Programme</h2>
+                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                    The Advanced HealthTech Consultant Program is designed to provide comprehensive knowledge and practical insights into emerging technologies transforming the Life Sciences and Healthcare (LSH) industry.
+                </p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    This program equips professionals, students, and healthcare innovators with advanced skills in digital healthcare systems, Artificial Intelligence (AI), Machine Learning (ML), blockchain applications, and healthcare innovation strategies — enabling them to lead digital transformation across pharma, medical devices, and health technology sectors.
+                </p>
+            </div>
+            <div class="space-y-3">
+                <div class="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--light-teal)">
+                        <svg class="w-4 h-4" style="color:var(--teal)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <p class="text-sm text-gray-700">Comprehensive coverage of <strong>AI, ML, blockchain, and digital health systems</strong> in one programme</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--light-teal)">
+                        <svg class="w-4 h-4" style="color:var(--teal)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <p class="text-sm text-gray-700">Industry-oriented expertise for <strong>digital transformation initiatives</strong> across healthcare and pharma</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--light-teal)">
+                        <svg class="w-4 h-4" style="color:var(--teal)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <p class="text-sm text-gray-700">Hands-on learning with <strong>real-world case studies</strong> and emerging technology insights</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background:var(--light-teal)">
+                        <svg class="w-4 h-4" style="color:var(--teal)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                    </div>
+                    <p class="text-sm text-gray-700">Opens doors to careers in <strong>HealthTech consulting, innovation management,</strong> and clinical analytics</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            <div class="grid md:grid-cols-2">
+    <!-- PROGRAMME OVERVIEW / MODULES -->
+    <div class="dot-grid py-14 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="mb-10 text-center">
+                <div class="divider-gold mx-auto"></div>
+                <h2 class="text-3xl font-bold">Programme Modules</h2>
+                <p class="text-gray-500 mt-2 text-sm">5 focused modules covering LSH tech fundamentals through healthcare innovation</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-5">
 
-                <!-- Left Image -->
-                <div class="hidden md:block">
-                    <img src="assets/images/Get in touch-pana.svg" alt="Clinical Research"
-                        class="h-full w-full object-contain">
+                <div class="feature-card rounded-xl p-6 shadow-sm">
+                    <div class="flex items-start gap-4">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h4 class="font-semibold mb-1" style="color:var(--navy)">Introduction to LSH Tech</h4>
+                            <p class="text-sm text-gray-500">Covers the evolving landscape of Life Sciences and Healthcare Technologies — including digital transformation, healthcare ecosystems, pharma & medical device technology roles, and future scope of the HealthTech industry.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Right Form -->
-                <div class="p-8 bg-blue-900">
-                    <h2 class="text-2xl font-bold text-white mb-6">
-                        Get In Touch
-                    </h2>
+                <div class="feature-card gold rounded-xl p-6 shadow-sm">
+                    <div class="flex items-start gap-4">
+                        <div class="step-number gold-bg">2</div>
+                        <div>
+                            <h4 class="font-semibold mb-1" style="color:var(--navy)">Digital Health Systems</h4>
+                            <p class="text-sm text-gray-500">Focuses on digital healthcare infrastructure — EHR, telemedicine, remote patient monitoring, Hospital Information Systems (HIS), mobile health applications, and healthcare interoperability & integration.</p>
+                        </div>
+                    </div>
+                </div>
 
-                    <form class="space-y-4">
+                <div class="feature-card rounded-xl p-6 shadow-sm">
+                    <div class="flex items-start gap-4">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h4 class="font-semibold mb-1" style="color:var(--navy)">AI/ML in Healthcare and Pharma</h4>
+                            <p class="text-sm text-gray-500">Explores AI and Machine Learning applications — predictive analytics, AI in drug discovery, medical imaging & diagnostics, AI-powered clinical decision support systems, and personalized/precision medicine.</p>
+                        </div>
+                    </div>
+                </div>
 
-                        <input type="text" placeholder="Full Name"
-                            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required />
+                <div class="feature-card gold rounded-xl p-6 shadow-sm">
+                    <div class="flex items-start gap-4">
+                        <div class="step-number gold-bg">4</div>
+                        <div>
+                            <h4 class="font-semibold mb-1" style="color:var(--navy)">Blockchain in Healthcare and Pharma</h4>
+                            <p class="text-sm text-gray-500">Explains blockchain fundamentals and practical applications — secure patient data management, blockchain for clinical trials, pharma supply chain transparency, smart contracts, and data privacy & cybersecurity.</p>
+                        </div>
+                    </div>
+                </div>
 
-                        <input type="tel" placeholder="Mobile Number"
-                            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required />
-
-                        <input type="email" placeholder="Email Address"
-                            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required />
-
-                        <textarea rows="4" placeholder="Your Message"
-                            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required></textarea>
-
-                        <button type="submit"
-                            class="w-full px-8 py-2 bg-white text-blue-900 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">
-                            Submit
-                        </button>
-
-                    </form>
+                <div class="feature-card rounded-xl p-6 shadow-sm md:col-span-2">
+                    <div class="flex items-start gap-4">
+                        <div class="step-number">5</div>
+                        <div>
+                            <h4 class="font-semibold mb-1" style="color:var(--navy)">Innovation in Healthcare and Pharma Technologies</h4>
+                            <p class="text-sm text-gray-500">Highlights emerging innovations shaping the industry's future — healthcare innovation models, medical device innovations, Internet of Medical Things (IoMT), wearable healthcare technologies, biotechnology, precision medicine, and future trends in digital healthcare.</p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
     </div>
 
-    <a href="https://wa.me/917709364700?text=Hello%21%20I%20am%20interested%20in%20your%20courses.%20Please%20guide%20me."
-        class="fixed bottom-10 right-2 bg-white rounded-[50%] py-2 px-1 hover:scale-105 transition duration-300"
-        target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fa-brands fa-whatsapp text-4xl" style="color: rgb(2, 117, 66);"></i>
+    <!-- KEY LEARNING AREAS -->
+    <div class="max-w-5xl mx-auto px-6 py-16">
+        <div class="mb-10">
+            <div class="divider-gold"></div>
+            <h2 class="text-3xl font-bold">Key Learning Areas</h2>
+            <p class="text-gray-500 mt-2 text-sm">Core topics covered across the programme</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="ai-area-card">
+                <div class="text-3xl mb-3">🖥️</div>
+                <p class="font-bold text-xs" style="color:var(--navy)">Digital Health Systems</p>
+                <p class="text-xs text-gray-400 mt-1">EHR, telemedicine & hospital information systems</p>
+            </div>
+            <div class="ai-area-card gold-bottom">
+                <div class="text-3xl mb-3">🤖</div>
+                <p class="font-bold text-xs" style="color:var(--navy)">AI & Machine Learning</p>
+                <p class="text-xs text-gray-400 mt-1">Predictive analytics & clinical decision support</p>
+            </div>
+            <div class="ai-area-card">
+                <div class="text-3xl mb-3">🔗</div>
+                <p class="font-bold text-xs" style="color:var(--navy)">Blockchain Technology</p>
+                <p class="text-xs text-gray-400 mt-1">Secure data management & supply chain transparency</p>
+            </div>
+            <div class="ai-area-card gold-bottom">
+                <div class="text-3xl mb-3">💡</div>
+                <p class="font-bold text-xs" style="color:var(--navy)">Healthcare Innovation</p>
+                <p class="text-xs text-gray-400 mt-1">Innovation models & disruptive healthcare tech</p>
+            </div>
+            <div class="ai-area-card gold-bottom">
+                <div class="text-3xl mb-3">🧬</div>
+                <p class="font-bold text-xs" style="color:var(--navy)">Drug Discovery AI</p>
+                <p class="text-xs text-gray-400 mt-1">AI accelerating pharmaceutical development</p>
+            </div>
+            <div class="ai-area-card">
+                <div class="text-3xl mb-3">⌚</div>
+                <p class="font-bold text-xs" style="color:var(--navy)">IoMT & Wearables</p>
+                <p class="text-xs text-gray-400 mt-1">Internet of Medical Things & wearable health tech</p>
+            </div>
+            <div class="ai-area-card gold-bottom">
+                <div class="text-3xl mb-3">🔬</div>
+                <p class="font-bold text-xs" style="color:var(--navy)">Precision Medicine</p>
+                <p class="text-xs text-gray-400 mt-1">Biotechnology & personalised healthcare approaches</p>
+            </div>
+            <div class="ai-area-card">
+                <div class="text-3xl mb-3">🛡️</div>
+                <p class="font-bold text-xs" style="color:var(--navy)">Data Privacy & Security</p>
+                <p class="text-xs text-gray-400 mt-1">Cybersecurity & smart contracts in healthcare</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGRAMME OUTCOMES -->
+    <div class="dot-grid py-14 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                <div class="px-8 py-6" style="background: linear-gradient(90deg, var(--navy), #134e6f);">
+                    <span class="badge mb-2 inline-block">Outcomes</span>
+                    <h2 class="text-2xl font-bold text-white">Programme Outcomes</h2>
+                    <p class="text-white/60 text-sm mt-1">What you will achieve upon completion</p>
+                </div>
+                <div class="p-8 grid md:grid-cols-3 gap-4">
+                    <div class="outcome-item p-4 flex gap-3 items-start">
+                        <span class="text-xl">🧠</span>
+                        <div>
+                            <p class="font-semibold text-sm" style="color:var(--navy)">Industry-Ready HealthTech Knowledge</p>
+                            <p class="text-xs text-gray-500">Gain industry-oriented expertise to support digital transformation initiatives across Life Sciences and Healthcare.</p>
+                        </div>
+                    </div>
+                    <div class="outcome-item p-4 flex gap-3 items-start">
+                        <span class="text-xl">🛠️</span>
+                        <div>
+                            <p class="font-semibold text-sm" style="color:var(--navy)">Practical Technology Insights</p>
+                            <p class="text-xs text-gray-500">Hands-on exposure to healthcare technology tools, AI/ML platforms, and blockchain applications used in real-world settings.</p>
+                        </div>
+                    </div>
+                    <div class="outcome-item p-4 flex gap-3 items-start">
+                        <span class="text-xl">🚀</span>
+                        <div>
+                            <p class="font-semibold text-sm" style="color:var(--navy)">Certification & Career Advancement</p>
+                            <p class="text-xs text-gray-500">Earn a professional certification and unlock career opportunities in HealthTech consulting, clinical analytics, and innovation management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAREER OPPORTUNITIES -->
+    <div class="max-w-5xl mx-auto px-6 py-16">
+        <div class="mb-10">
+            <div class="divider-gold"></div>
+            <h2 class="text-3xl font-bold">Career Opportunities</h2>
+            <p class="text-gray-500 mt-2 text-sm">Roles you can pursue with HealthTech expertise</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+            <div class="career-card rounded-xl p-6 shadow-sm text-center">
+                <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center" style="background:var(--light-teal)">
+                    <svg class="w-6 h-6" style="color:var(--teal)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                </div>
+                <p class="font-bold text-sm" style="color:var(--navy)">Digital Health Consultant</p>
+                <p class="text-xs text-gray-400 mt-1">Strategy & implementation</p>
+            </div>
+            <div class="career-card rounded-xl p-6 shadow-sm text-center" style="border-top-color:var(--gold)">
+                <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center" style="background:#fdf3dc">
+                    <svg class="w-6 h-6" style="color:var(--gold)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                </div>
+                <p class="font-bold text-sm" style="color:var(--navy)">Healthcare Technology Manager</p>
+                <p class="text-xs text-gray-400 mt-1">Tech management in healthcare</p>
+            </div>
+            <div class="career-card rounded-xl p-6 shadow-sm text-center">
+                <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center" style="background:var(--light-teal)">
+                    <svg class="w-6 h-6" style="color:var(--teal)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                </div>
+                <p class="font-bold text-sm" style="color:var(--navy)">AI Healthcare Analyst</p>
+                <p class="text-xs text-gray-400 mt-1">AI-driven healthcare solutions</p>
+            </div>
+            <div class="career-card rounded-xl p-6 shadow-sm text-center" style="border-top-color:var(--gold)">
+                <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center" style="background:#fdf3dc">
+                    <svg class="w-6 h-6" style="color:var(--gold)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" /></svg>
+                </div>
+                <p class="font-bold text-sm" style="color:var(--navy)">Clinical Data Analytics Specialist</p>
+                <p class="text-xs text-gray-400 mt-1">Data analytics & insights</p>
+            </div>
+            <div class="career-card rounded-xl p-6 shadow-sm text-center">
+                <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center" style="background:var(--light-teal)">
+                    <svg class="w-6 h-6" style="color:var(--teal)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                </div>
+                <p class="font-bold text-sm" style="color:var(--navy)">Pharma Technology Consultant</p>
+                <p class="text-xs text-gray-400 mt-1">Tech consulting in pharma</p>
+            </div>
+            <div class="career-card rounded-xl p-6 shadow-sm text-center" style="border-top-color:var(--gold)">
+                <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center" style="background:#fdf3dc">
+                    <svg class="w-6 h-6" style="color:var(--gold)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
+                </div>
+                <p class="font-bold text-sm" style="color:var(--navy)">HealthTech Innovation Manager</p>
+                <p class="text-xs text-gray-400 mt-1">Innovation & strategy leadership</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ELIGIBILITY + FEE -->
+    <div class="dot-grid py-14 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+
+            <!-- Eligibility -->
+            <div class="bg-white rounded-2xl shadow-sm p-8 border-t-4" style="border-color:var(--teal)">
+                <div class="divider-gold"></div>
+                <h3 class="text-2xl font-bold mb-4" style="color:var(--navy)">Eligibility</h3>
+                <p class="text-sm text-gray-500 mb-5">Graduates and Post-Graduates in Medical and Healthcare fields are eligible:</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="pill-tag">MBBS</span>
+                    <span class="pill-tag">BDS</span>
+                    <span class="pill-tag">BAMS</span>
+                    <span class="pill-tag">BHMS</span>
+                    <span class="pill-tag">Pharm D</span>
+                    <span class="pill-tag">M.Pharmacy</span>
+                    <span class="pill-tag">B.Pharmacy</span>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                    <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold mb-1">Programme Mode</p>
+                    <p class="text-sm text-gray-600">Online Live Classes · Full time / Part time</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                    <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold mb-1">Programmes Available</p>
+                    <p class="text-sm text-gray-600">PG Diploma · Executive Diploma · Professional Certification</p>
+                </div>
+            </div>
+
+            <!-- Fee -->
+            <div class="fee-card rounded-2xl shadow-lg p-8 text-white relative z-0">
+                <p class="text-xs uppercase tracking-widest text-white/50 font-semibold mb-2">Programme Fee</p>
+                <h3 class="text-2xl font-bold mb-1">Professional Certification</h3>
+                <p class="text-white/60 text-sm mb-6">Full Time / Part Time · Online Live Classes</p>
+                <div class="mb-2">
+                    <span class="text-5xl font-black" style="color:var(--gold)">₹55,000</span>
+                </div>
+                <p class="text-white/50 text-sm mb-8">or <span class="text-white font-semibold">$598 USD</span></p>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 text-sm text-white/80">
+                        <svg class="w-4 h-4 flex-shrink-0" style="color:var(--gold)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                        5 focused programme modules
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-white/80">
+                        <svg class="w-4 h-4 flex-shrink-0" style="color:var(--gold)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                        AI/ML, blockchain & digital health coverage
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-white/80">
+                        <svg class="w-4 h-4 flex-shrink-0" style="color:var(--gold)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                        Practical healthcare technology insights
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-white/80">
+                        <svg class="w-4 h-4 flex-shrink-0" style="color:var(--gold)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                        Professional Certification awarded
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <button type="button" onclick="openModal()" class="enquire-btn w-full text-center" style="display:block;">Enquire Now →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ENQUIRE MODAL -->
+    <div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full mx-4 overflow-hidden relative">
+            <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold">✕</button>
+            <div class="grid md:grid-cols-2">
+                <div class="hidden md:block">
+                    <img src="assets/images/Get in touch-pana.svg" alt="HealthTech" class="h-full w-full object-contain">
+                </div>
+                <div class="p-8 bg-blue-900">
+                    <h2 class="text-2xl font-bold text-white mb-6">Get In Touch</h2>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Full Name" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                        <input type="tel" placeholder="Mobile Number" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                        <input type="email" placeholder="Email Address" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                        <textarea rows="4" placeholder="Your Message" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                        <button type="submit" class="w-full px-8 py-2 bg-white text-blue-900 font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/917709364700?text=Hello%21%20I%20am%20interested%20in%20the%20Advanced%20HealthTech%20Consultant%20Program.%20Please%20guide%20me."
+        class="fixed bottom-10 right-2 bg-white rounded-[50%] py-2 px-1 hover:scale-105 transition duration-300" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" class="w-9 h-9" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
-<!-- ================= FOOTER ================= -->
+
+    <!-- FOOTER -->
     <footer class="footer-main">
-
-        <!-- Top accent line -->
         <div style="height:3px; background: linear-gradient(90deg, var(--teal), var(--gold), var(--teal));"></div>
-
-        <!-- Main footer content -->
         <div class="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
-            <!-- Col 1: Brand -->
+            <!-- Brand -->
             <div>
                 <div class="footer-logo-text mb-2">Saffron <span>Indian Institute</span></div>
                 <div class="gold-pill">Est. Since 2025</div>
-                <p style="color:rgba(255,255,255,0.55); font-size:0.85rem; line-height:1.7;">
-                    Practical-based clinical research training institute preparing professionals for healthcare
-                    industries.
-                </p>
+                <p style="color:rgba(255,255,255,0.55); font-size:0.85rem; line-height:1.7;">Practical-based clinical research training institute preparing professionals for healthcare industries.</p>
                 <div class="mt-5 pt-5" style="border-top:1px solid rgba(255,255,255,0.08)">
-                    <p
-                        style="color:rgba(255,255,255,0.35); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">
-                        Recognised By</p>
+                    <p style="color:rgba(255,255,255,0.35); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Recognised By</p>
                     <div class="flex flex-wrap gap-2">
-                        <span
-                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.6); font-size:0.72rem; padding:4px 10px; border-radius:6px; font-weight:500;">ISO
-                            Certified</span>
-                        <span
-                            style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.6); font-size:0.72rem; padding:4px 10px; border-radius:6px; font-weight:500;">GCP
-                            Compliant</span>
+                        <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.6); font-size:0.72rem; padding:4px 10px; border-radius:6px; font-weight:500;">ISO Certified</span>
+                        <span style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.6); font-size:0.72rem; padding:4px 10px; border-radius:6px; font-weight:500;">GCP Compliant</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Col 2: Quick Links -->
+            <!-- Quick Links -->
             <div>
                 <p class="footer-heading">Quick Links</p>
-                <a href="/" class="footer-link">
-                    <span style="color:var(--teal); margin-right:6px;">›</span> Home
-                </a>
-                <a href="/cources.html" class="footer-link">
-                    <span style="color:var(--teal); margin-right:6px;">›</span> Courses
-                </a>
-                <a href="/aboutus.html" class="footer-link">
-                    <span style="color:var(--teal); margin-right:6px;">›</span> About
-                </a>
-                <a href="#" class="footer-link">
-                    <span style="color:var(--teal); margin-right:6px;">›</span> Contact
-                </a>
+                <a href="/" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Home</a>
+                <a href="/cources.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Courses</a>
+                <a href="/aboutus.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> About</a>
+                <a href="/contact.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Contact</a>
                 <div class="footer-divider my-4"></div>
                 <p class="footer-heading" style="margin-top:1rem;">Our Programmes</p>
-                <a href="/cources/medical-writing.html" class="footer-link"><span
-                        style="color:var(--teal); margin-right:6px;">›</span> Medical
-                    Writing(Drug)</a>
-                <a href="/cources/medical-writing-devices.html" class="footer-link"><span
-                        style="color:var(--teal); margin-right:6px;">›</span> Medical
-                    Writing(Medical Devices)</a>
-                <a href="/cources/regulatory-affairs.html" class="footer-link"><span
-                        style="color:var(--teal); margin-right:6px;">›</span> Regulatory
-                    Affairs</a>
-                <a href="/cources/pharmacovigilance.html" class="footer-link"><span
-                        style="color:var(--teal); margin-right:6px;">›</span>
-                    Pharmacovigilance</a>
-                <a href="/cources/clinical-research.html" class="footer-link"><span
-                        style="color:var(--teal); margin-right:6px;">›</span> Clinical
-                    Research</a>
-                <a href="/cources/clinical-data-management.html" class="footer-link"><span
-                        style="color:var(--teal); margin-right:6px;">›</span> Clinical
-                    Data Management</a>
-                <a href="/cources/AI-in-clinical-research.html" class="footer-link"><span
-                        style="color:var(--teal); margin-right:6px;">›</span>AI in Clinical
-                    Research
-                    <span
-                        class="text-[10px] font-bold text-white bg-gold px-1.5 py-0.5 rounded-full leading-none">New</span>
-                </a>
-                <a href="/cources/advanced-healthTech-consultant-program.html" class="footer-link"><span
-                        style="color:var(--teal); margin-right:6px;">›</span>Advanced HealthTech Consultant Program
-                    <span
-                        class="text-[10px] font-bold text-white bg-gold px-1.5 py-0.5 rounded-full leading-none">New</span>
-                </a>
-                <a href="/cources/basic-to-advanced-excel.html" class="footer-link"><span
-                        style="color:var(--teal); margin-right:6px;">›</span>Basic To Advanced Excel</a>
-                <a href="/cources/personality-development.html" class="footer-link"><span
-                        style="color:var(--teal); margin-right:6px;">›</span>Personality Development</a>
+                <a href="/cources/medical-writing.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Medical Writing (Drug)</a>
+                <a href="/cources/regulatory-affairs.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Regulatory Affairs</a>
+                <a href="/cources/pharmacovigilance.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Pharmacovigilance</a>
+                <a href="/cources/clinical-research.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Clinical Research</a>
+                <a href="/cources/clinical-data-management.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Clinical Data Management</a>
+                <a href="/cources/AI-in-clinical-research.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> AI in Clinical Research</a>
+                <a href="/cources/advanced-healthTech-consultant-program.html" class="footer-link"><span style="color:var(--teal); margin-right:6px;">›</span> Advanced HealthTech Consultant <span class="text-[10px] font-bold text-white bg-gold px-1.5 py-0.5 rounded-full leading-none ml-1">New</span></a>
             </div>
-
-            <!-- Col 3: Contact -->
+            <!-- Contact -->
             <div>
                 <p class="footer-heading">Contact</p>
-
                 <div class="footer-contact-row">
-                    <div class="footer-contact-icon">
-                        <svg class="w-4 h-4" style="color:var(--teal)" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <div class="footer-contact-text">
-                        <a href="mailto:info@saffronindia.org.in">info@saffronindia.org.in</a><br>
-                        <a href="mailto:placement@saffronindia.org.in">placement@saffronindia.org.in</a>
-                    </div>
+                    <div class="footer-contact-icon"><svg class="w-4 h-4" style="color:var(--teal)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></div>
+                    <div class="footer-contact-text"><a href="mailto:info@saffronindia.org.in">info@saffronindia.org.in</a><br><a href="mailto:placement@saffronindia.org.in">placement@saffronindia.org.in</a></div>
                 </div>
-
                 <div class="footer-contact-row">
-                    <div class="footer-contact-icon">
-                        <svg class="w-4 h-4" style="color:var(--teal)" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                    </div>
-                    <div class="footer-contact-text">
-                        <!-- <a href="tel:18001031071">18001031071 (Toll Free)</a><br> -->
-                        <a href="tel:+917709364700">+91 7709364700</a>
-                    </div>
+                    <div class="footer-contact-icon"><svg class="w-4 h-4" style="color:var(--teal)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg></div>
+                    <div class="footer-contact-text"><a href="tel:+917709364700">+91 7709364700</a></div>
                 </div>
-
                 <div class="footer-contact-row">
-                    <div class="footer-contact-icon">
-                        <svg class="w-4 h-4" style="color:var(--teal)" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </div>
-                    <div class="footer-contact-text">
-                        Saffron Indian Institute of Clinical Research & Technology,<br>
-                        C-6, Narhe Institutional Area,<br>
-                        Narhe, Pune, Maharashtra – 411041, India
-                    </div>
+                    <div class="footer-contact-icon"><svg class="w-4 h-4" style="color:var(--teal)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div>
+                    <div class="footer-contact-text">Saffron Indian Institute of Clinical Research & Technology,<br>C-6, Narhe Institutional Area,<br>Narhe, Pune, Maharashtra – 411041, India</div>
                 </div>
             </div>
-
-            <!-- Col 4: Follow Us -->
+            <!-- Follow + CTA -->
             <div>
                 <p class="footer-heading">Follow Us</p>
                 <div class="flex flex-col">
-                    <a href="#" class="social-btn">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                        </svg>
-                        Facebook
-                    </a>
-                    <a href="#" class="social-btn">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg>
-                        LinkedIn
-                    </a>
-                    <a href="#" class="social-btn">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                        </svg>
-                        Instagram
-                    </a>
+                    <a href="#" class="social-btn"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>Facebook</a>
+                    <a href="#" class="social-btn"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>LinkedIn</a>
+                    <a href="#" class="social-btn"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>Instagram</a>
                 </div>
-
-                <!-- CTA -->
-                <div class="mt-6 p-4 rounded-xl"
-                    style="background:rgba(14,124,123,0.15); border:1px solid rgba(14,124,123,0.25);">
-                    <p style="color:white; font-size:0.82rem; font-weight:600; margin-bottom:8px;">Ready to start your
-                        career?</p>
-                    <button type="button" onclick="openModal()" class="enquire-btn"
-                        style="font-size:0.78rem; padding:8px 18px; display:inline-block;">Enquire Now →</button>
+                <div class="mt-6 p-4 rounded-xl" style="background:rgba(14,124,123,0.15); border:1px solid rgba(14,124,123,0.25);">
+                    <p style="color:white; font-size:0.82rem; font-weight:600; margin-bottom:8px;">Ready to start your career?</p>
+                    <button type="button" onclick="openModal()" class="enquire-btn" style="font-size:0.78rem; padding:8px 18px; display:inline-block;">Enquire Now →</button>
                 </div>
             </div>
         </div>
-
-        <!-- Divider -->
         <div class="footer-divider mx-6"></div>
-
-        <!-- Bottom bar -->
         <div class="footer-bottom px-6 py-5">
             <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-                <p style="color:rgba(255,255,255,0.35); font-size:0.78rem; letter-spacing:0.04em;">
-                    © 2026 Saffron Indian Institute. All rights reserved.
-                </p>
+                <p style="color:rgba(255,255,255,0.35); font-size:0.78rem; letter-spacing:0.04em;">© 2026 Saffron Indian Institute. All rights reserved.</p>
                 <div class="flex gap-5">
-                    <a href="#"
-                        style="color:rgba(255,255,255,0.35); font-size:0.78rem; text-decoration:none; transition:color 0.2s;"
-                        onmouseover="this.style.color='rgba(255,255,255,0.7)'"
-                        onmouseout="this.style.color='rgba(255,255,255,0.35)'">Privacy Policy</a>
-                    <a href="#"
-                        style="color:rgba(255,255,255,0.35); font-size:0.78rem; text-decoration:none; transition:color 0.2s;"
-                        onmouseover="this.style.color='rgba(255,255,255,0.7)'"
-                        onmouseout="this.style.color='rgba(255,255,255,0.35)'">Terms of Use</a>
-                    <a href="#"
-                        style="color:rgba(255,255,255,0.35); font-size:0.78rem; text-decoration:none; transition:color 0.2s;"
-                        onmouseover="this.style.color='rgba(255,255,255,0.7)'"
-                        onmouseout="this.style.color='rgba(255,255,255,0.35)'">Sitemap</a>
+                    <a href="#" style="color:rgba(255,255,255,0.35); font-size:0.78rem; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.7)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Privacy Policy</a>
+                    <a href="#" style="color:rgba(255,255,255,0.35); font-size:0.78rem; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.7)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Terms of Use</a>
+                    <a href="#" style="color:rgba(255,255,255,0.35); font-size:0.78rem; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.7)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Sitemap</a>
                 </div>
             </div>
         </div>
-
     </footer>
-<script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-            },
-        });
 
+    <script>
         function openModal() {
-            toggleMenu();
             document.getElementById("popupModal").classList.remove("hidden");
             document.getElementById("popupModal").classList.add("flex");
         }
@@ -776,20 +946,7 @@
             document.getElementById("popupModal").classList.remove("flex");
             document.getElementById("popupModal").classList.add("hidden");
         }
-        function toggleMenu() {
-            const menu = document.getElementById("mobileMenu");
 
-            if (menu.classList.contains("max-h-0")) {
-                menu.classList.remove("max-h-0");
-                menu.classList.add("max-h-screen");
-            } else {
-                menu.classList.remove("max-h-screen");
-                menu.classList.add("max-h-0");
-            }
-        }
-    </script>
-    <script>
-        // Mobile menu toggle
         let menuOpen = false;
         function toggleMenu() {
             menuOpen = !menuOpen;
@@ -809,16 +966,6 @@
             }
         }
 
-        // Accordion toggles for mobile
-        function toggleAccordion(id) {
-            const el = document.getElementById(id);
-            const icon = document.getElementById(id + '-icon');
-            const isHidden = el.classList.contains('hidden');
-            el.classList.toggle('hidden', !isHidden);
-            icon.style.transform = isHidden ? 'rotate(180deg)' : '';
-        }
-
-        // Navbar scroll shadow enhancement
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 10) {
@@ -829,5 +976,4 @@
         });
     </script>
 </body>
-
 </html>
